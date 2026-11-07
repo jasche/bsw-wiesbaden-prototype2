@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Vorstand – BSW Kreisverband Wiesbaden</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Interner Prototyp der Wiesbadener Kreisverbandsseite – nur zur Review.">
+
+  <!-- Original-Theme-CSS (Hotlink) -->
+  <link rel="stylesheet" href="https://he.bsw-vg.de/wp-content/themes/bsw-master/style.css">
+  <link rel="stylesheet" href="https://he.bsw-vg.de/wp-content/themes/bsw-master/css/components.css">
+  <link rel="stylesheet" href="https://he.bsw-vg.de/wp-content/themes/bsw-master/css/responsive.css">
+
+  <style>
+    .proto-banner {
+      background: #661d4d; color: #fff; text-align: center;
+      padding: 8px 16px; font-size: 14px; font-weight: 600; letter-spacing: .02em;
+    }
+    .proto-banner a { color: #ffe; text-decoration: underline; }
+    .kv-text p { line-height: 1.6; margin-bottom: 1em; }
+    .kv-section { scroll-margin-top: 100px; margin-top: 2em; }
+    .kv-section h2 { margin-top: 1.5em; }
+    .placeholder { color: #b33; font-style: italic; }
+    
+    /* Ein kleiner Abstand zwischen den dynamisch geladenen Vorstandsmitgliedern */
+    #vorstand-container > div {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="proto-banner">
+  Prototyp – nur zur internen Review. Inhalte sind Platzhalter (Lorem Ipsum).
+</div>
+
+<div id="wrapper">
+
+  <header>
+    <div class="container padding">
+      <div class="row space-between">
+        <div class="row items-center">
+          <!-- ../ führt zurück zum Hauptordner -->
+          <a href="../">
+            <img class="headerLogo" src="https://he.bsw-vg.de/wp-content/uploads/2025/12/bsw-he-logo.svg" alt="BSW Hessen">
+          </a>
+        </div>
+        <div class="row items-center">
+          <div class="mainMenu">
+            <ul id="menu-mainmenu" class="menu">
+              <li class="menu-item"><a href="https://he.bsw-vg.de/aktuelles/">Aktuelles</a></li>
+              <li class="menu-item"><a href="https://he.bsw-vg.de/kommunalpolitische-schwerpunkte/">Wahlen 2026</a></li>
+              <li class="menu-item"><a href="https://he.bsw-vg.de/partei/programm/">Programm</a></li>
+              <li class="menu-item"><a href="https://he.bsw-vg.de/partei/landesvorstand/">Landesvorstand</a></li>
+              <li class="menu-item"><a href="https://he.bsw-vg.de/kreisverbaende/">Kreisverbände</a></li>
+              <li class="button menu-item"><a href="https://he.bsw-vg.de/spenden/">Förderer werden</a></li>
+            </ul>
+          </div>
+          <form action="#" method="get" class="row justify-center searchForm" onsubmit="return false;">
+            <input class="searchInput" type="search" name="s" placeholder="Suche">
+            <img class="searchButton" src="https://he.bsw-vg.de/wp-content/themes/bsw-master/assets/icons/search.svg" alt="Suchen">
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="content">
+
+    <div class="component titleBox">
+      <div class="gradientBack">
+        <div class="container">
+          <div class="gradientFront">
+            <div class="container padding">
+              <h1>Vorstand</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container padding component">
+      <div class="row gap-80 topicsRow">
+        
+        <!-- SIDEBAR MENU -->
+        <div class="col stretch-third">
+          <ul class="pageMenu">
+            <li><a href="../" class="noUnderline">Kreisverband Wiesbaden</a></li>
+            <li class="active"><a href="../Vorstand/" class="noUnderline">Vorstand</a></li>
+            <li><a href="../Fraktion/" class="noUnderline">Fraktion</a></li>
+            <li><a href="../Menschen/" class="noUnderline">Menschen</a></li>
+            <li><a href="../Program/" class="noUnderline">Programm</a></li>
+            <li><a href="../Termine/" class="noUnderline">Termine</a></li>
+            <li><a href="../Mitreden/" class="noUnderline">Mitreden</a></li>
+            <li><a href="../Aktuelles/" class="noUnderline">Aktuelles</a></li>
+            <li><a href="../Social_Media/" class="noUnderline">Social Media</a></li>
+            <li><a href="../Kontakt/" class="noUnderline">Kontakt</a></li>
+            <li><a href="../Downloadbereich/" class="noUnderline">Downloadbereich</a></li>
+          </ul>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="col stretch">
+          <div class="wpb-content-wrapper">
+            <div class="vc_row wpb_row vc_row-fluid">
+              <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner">
+                  <div class="wpb_wrapper">
+                    <div class="wpb_text_column wpb_content_element">
+                      <div class="wpb_wrapper">
+                        <div class="kv-text">
+
+                          <section class="kv-section">
+                            <h2>Der Vorstand des Kreisverbands Wiesbaden</h2>
+                            <p class="placeholder">Platzhalter – hier werden die Mitglieder des Vorstands vorgestellt.</p>
+                            
+                            <!-- Dieser Container wird per JavaScript mit Inhalt gefüllt -->
+                            <div id="vorstand-container">
+                              <p>Lade Daten...</p>
+                            </div>
+
+                          </section>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FOOTER BOX -->
+    <div class="footerBox" style="background-color: #EDF2F4; padding: 70px 0 100px;">
+      <div class="container padding">
+        <div class="row items-center gap-100">
+          <div class="col stretch-double row vertical">
+            <h1>Sie haben Fragen?</h1>
+            <p>Welche inhaltlichen Positionen vertritt die neue Partei? Wie kann ich das BSW unterstützen? Wie kann ich Unterstützer oder Förderer werden und was ist der Unterschied? Sicher haben Sie viele Fragen. Wir haben versucht, einen Großteil Ihrer möglichen Fragen zu beantworten und leiten Sie hierzu auf die Website der Bundespartei weiter.</p>
+            <a href="https://bsw-vg.de/faq/" target="_blank" rel="noopener" class="ctaLink">
+              <div class="row">
+                <div class="ctaLinkText">Zu den FAQ</div>
+                <img class="ctaLinkIcon" src="https://he.bsw-vg.de/wp-content/themes/bsw-master/assets/icons/arrow-r.svg" alt="">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="gradientBack">
+      <div class="container">
+        <div class="gradientFront">
+          <div class="container padding">
+            <div class="row space-between">
+              <div class="col">
+                <div class="footerMenu">
+                  <ul class="menu">
+                    <li><a href="https://he.bsw-vg.de/spenden/">Förderer werden</a></li>
+                    <li><a href="https://bsw-vg.de/unterstuetzer-werden/" target="_blank" rel="noopener">Unterstützer werden</a></li>
+                    <li><a href="https://bsw-vg.de/wp-content/uploads/2024/01/Finanzordnung_BSW.pdf" target="_blank" rel="noopener">Finanzordnung</a></li>
+                    <li><a href="https://bsw-vg.de/wp-content/uploads/2024/01/Schiedsordnung_BSW.pdf" target="_blank" rel="noopener">Schiedsordnung</a></li>
+                    <li><a href="https://bsw-vg.de/wp-content/uploads/2024/01/Wahlordnung.pdf" target="_blank" rel="noopener">Wahlordnung</a></li>
+                    <li><a href="https://bsw-vg.de/wp-content/uploads/2024/02/Satzung_BSW.pdf" target="_blank" rel="noopener">Satzung</a></li>
+                    <li><a href="https://he.bsw-vg.de/impressum/">Impressum</a></li>
+                    <li><a href="https://he.bsw-vg.de/datenschutz/">Datenschutz</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row vertical">
+                  <div class="col mo-2">
+                    <a class="footerLogo" href="../">
+                      <img src="https://he.bsw-vg.de/wp-content/uploads/2025/12/bsw-neg-logo.svg" alt="BSW Hessen">
+                    </a>
+                  </div>
+                  <div class="col mo-1">
+                    <div class="socialMenu">
+                      <ul class="menu">
+                        <li><a href="https://www.facebook.com/bsw.hessen" target="_blank" rel="noopener"><span class="icon facebook"></span></a></li>
+                        <li><a href="https://www.instagram.com/bsw.hessen/" target="_blank" rel="noopener"><span class="icon instagram"></span></a></li>
+                        <li><a href="https://www.youtube.com/@BuendnisSahraWagenknecht" target="_blank" rel="noopener"><span class="icon youtube"></span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- JAVASCRIPT FÜR DYNAMISCHE DATEN -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Daten aus der JSON-Datei laden
+    fetch('vorstand.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Netzwerkantwort war nicht ok");
+        }
+        return response.json();
+      })
+      .then(data => {
+        const container = document.getElementById('vorstand-container');
+        // Den "Lade Daten..." Text entfernen
+        container.innerHTML = ''; 
+        
+        // Für jedes Mitglied im JSON einen HTML-Block bauen
+        data.forEach(member => {
+          const memberDiv = document.createElement('div');
+          memberDiv.innerHTML = `
+            <h3 style="margin-bottom: 0.2em;">${member.name}</h3>
+            <p style="margin-bottom: 0.8em;"><b>${member.role}</b></p>
+            <p>${member.bio}</p>
+          `;
+          container.appendChild(memberDiv);
+        });
+      })
+      .catch(error => {
+        console.error('Fehler beim Laden der JSON-Daten:', error);
+        document.getElementById('vorstand-container').innerHTML = '<p style="color:red;">Fehler beim Laden der Daten. (Bitte über einen lokalen Server aufrufen, z.B. python3 -m http.server)</p>';
+      });
+  });
+</script>
+
+</body>
+</html>

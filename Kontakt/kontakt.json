@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Max Mustermann",
+    "role": "Kreisvorsitzender",
+    "email": "vorsitz@bsw-wiesbaden.de",
+    "phone": "+49 611 1234567"
+  },
+  {
+    "name": "Erika Mustermann",
+    "role": "Stellvertretende Vorsitzende",
+    "email": "stv-vorsitz@bsw-wiesbaden.de",
+    "phone": ""
+  },
+  {
+    "name": "Hans Beispiel",
+    "role": "Pressesprecher",
+    "email": "presse@bsw-wiesbaden.de",
+    "phone": "+49 611 7654321"
+  },
+  {
+    "name": "Geschäftsstelle Wiesbaden",
+    "role": "Allgemeine Anfragen",
+    "email": "kontakt@bsw-wiesbaden.de",
+    "phone": ""
+  }
+]

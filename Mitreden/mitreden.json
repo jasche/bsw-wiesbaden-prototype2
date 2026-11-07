@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Aktiv mitgestalten",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Werden Sie Teil unserer Bewegung und gestalten Sie die Wiesbadener Kommunalpolitik aktiv mit.",
+    "link": "https://bsw-vg.de/unterstuetzer-werden/",
+    "action": "Mitglied werden"
+  },
+  {
+    "title": "Ihre Ideen einbringen",
+    "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Sie haben Anregungen, Kritik oder ein konkretes Anliegen in Ihrem Stadtteil? Schreiben Sie uns!",
+    "link": "../Kontakt/",
+    "action": "Idee einreichen"
+  },
+  {
+    "title": "Stammtisch besuchen",
+    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Kommen Sie zu unserem monatlichen Stammtisch und diskutieren Sie in entspannter Atmosphäre mit.",
+    "link": "../Termine/",
+    "action": "Zu den Terminen"
+  }
+]

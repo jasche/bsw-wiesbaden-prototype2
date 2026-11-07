@@ -1,0 +1,22 @@
+[
+  {
+    "platform": "Facebook",
+    "url": "https://www.facebook.com/bsw.hessen",
+    "description": "Folgen Sie uns auf Facebook für aktuelle News und Diskussionen."
+  },
+  {
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/bsw.hessen/",
+    "description": "Einblicke in unsere Arbeit, Events und den Kommunalwahlkampf."
+  },
+  {
+    "platform": "YouTube",
+    "url": "https://www.youtube.com/@BuendnisSahraWagenknecht",
+    "description": "Reden, Interviews und Videos auf unserem YouTube-Kanal."
+  },
+  {
+    "platform": "TikTok",
+    "url": "#",
+    "description": "Kurze Videos und spannende Einblicke (Platzhalter-Link)."
+  }
+]

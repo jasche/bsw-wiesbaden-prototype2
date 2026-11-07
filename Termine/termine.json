@@ -1,0 +1,23 @@
+[
+  {
+    "titel": "BSW-Stammtisch Wiesbaden",
+    "datum": "15. November 2026",
+    "uhrzeit": "19:00 Uhr",
+    "ort": "Restaurant Zur Post, Musterstraße 1, Wiesbaden",
+    "beschreibung": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Kommen Sie vorbei und diskutieren Sie mit uns!"
+  },
+  {
+    "titel": "Kommunalpolitischer Dialog",
+    "datum": "28. November 2026",
+    "uhrzeit": "18:30 Uhr",
+    "ort": "Stadthalle Wiesbaden, Großer Saal",
+    "beschreibung": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+  },
+  {
+    "titel": "Infostand in der Innenstadt",
+    "datum": "05. Dezember 2026",
+    "uhrzeit": "10:00 - 14:00 Uhr",
+    "ort": "Fußgängerzone, Ecke Kirchgasse",
+    "beschreibung": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Wir freuen uns auf Ihre Fragen."
+  }
+]
