@@ -456,6 +456,11 @@ collections:
         name: file
         widget: file
         hint: Nur Material mit geklärten Bild- und Musikrechten hochladen.
+      - label: Vorschaubild (optional)
+        name: vorschau
+        widget: image
+        required: false
+        hint: Wird auf der Seite als anklickbare Vorschau gezeigt. Bei Bildern nicht nötig, bei Videos und PDFs empfohlen (z. B. Screenshot der ersten Seite).
       - label: Dateityp (z. B. PDF)
         name: type
         widget: string
