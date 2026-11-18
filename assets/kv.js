@@ -251,11 +251,25 @@
     },
 
     aktuelles: function () {
-      return load('aktuelles.json').then(function (data) {
+      load('aktuelles.json').then(function (data) {
         header(data);
         var list = items(data);
         setHtml('aktuelles-container', list.length ? list.map(newsItem).join('') : emptyNote('Neue Meldungen folgen in Kürze.'));
       }).catch(function (e) { showError('aktuelles-container', e); });
+
+      // Lesetipps: NachDenkSeiten (stündlich per GitHub Action aktualisiert)
+      load('nachdenkseiten.json').then(function (feed) {
+        var list = (feed && feed.eintraege) || [];
+        if (!list.length) return;
+        setHtml('kv-feed',
+          '<h2>Lesetipps: ' + esc(feed.quelle || 'NachDenkSeiten') + '</h2>' +
+          '<ul class="kv-feed-list">' + list.map(function (f) {
+            return '<li><span class="news-date">' + esc(f.datum) + (f.autor ? ' · ' + esc(f.autor) : '') + '</span>' +
+              '<a href="' + esc(safeUrl(f.link)) + '" target="_blank" rel="noopener">' + esc(f.titel) + '</a></li>';
+          }).join('') + '</ul>' +
+          '<p class="kv-feed-note">Externe Beiträge von <a href="' + esc(safeUrl(feed.quelle_url)) + '" target="_blank" rel="noopener">nachdenkseiten.de</a>. ' +
+          'Für die Inhalte ist der jeweilige Anbieter verantwortlich; sie geben nicht zwingend die Position des BSW wieder.</p>');
+      }).catch(function (e) { console.warn('Feed nicht geladen', e); });
     },
 
     social: function () {
@@ -338,6 +352,12 @@
     '.kv-thumb-type{font-weight:bold;color:#661d4d;font-size:1.1em;letter-spacing:.05em}' +
     '.kv-thumb-video:after{content:"";position:absolute;top:50%;left:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;' +
     'background:rgba(102,29,77,.85) url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Cpath fill=%27white%27 d=%27M8 5v14l11-7z%27/%3E%3C/svg%3E") center/22px no-repeat}' +
+    '#kv-feed{margin-top:3em;padding-top:1.5em;border-top:1px solid #eee}' +
+    '.kv-text ul.kv-feed-list{list-style:none;margin:0 0 1em 0;padding:0}' +
+    '.kv-feed-list li{padding:.7em 0;border-bottom:1px solid #f0f0f0}' +
+    '.kv-feed-list .news-date{margin-bottom:.2em}' +
+    '.kv-feed-list a{color:#661d4d;font-weight:600;text-decoration:none}.kv-feed-list a:hover{text-decoration:underline}' +
+    '.kv-feed-note{font-size:.85em;color:#777}' +
     '@media (max-width:600px){.kv-thumb{width:100%;flex-basis:auto;height:220px;margin:0 0 15px 0}}';
 
   function init(page) {
