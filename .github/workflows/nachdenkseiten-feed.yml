@@ -1,0 +1,47 @@
+# Aktualisiert stündlich die NachDenkSeiten-Lesetipps unter /Aktuelles/
+# und stößt danach den GitHub-Pages-Build an.
+name: NachDenkSeiten-Feed
+
+on:
+  schedule:
+    - cron: "17 * * * *"   # jede Stunde um :17
+  workflow_dispatch:        # manuell über den Reiter "Actions" startbar
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: nachdenkseiten-feed
+  cancel-in-progress: false
+
+jobs:
+  feed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Feed abrufen
+        run: python .github/scripts/feed.py
+
+      - name: Änderung speichern und Seite neu bauen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- Aktuelles/nachdenkseiten.json; then
+            echo "Keine neuen Beiträge."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Aktuelles/nachdenkseiten.json
+          git commit -m "Feed: NachDenkSeiten aktualisiert"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+          # Pushes mit GITHUB_TOKEN lösen keinen Pages-Build aus – daher explizit anfordern
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" || echo "Pages-Build konnte nicht angefordert werden."
