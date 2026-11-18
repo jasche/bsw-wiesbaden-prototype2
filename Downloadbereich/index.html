@@ -145,24 +145,9 @@
 
     <div class="container padding component">
       <div class="row gap-80 topicsRow">
-        
-        <!-- SIDEBAR MENU -->
+        <!-- SIDEBAR MENU: wird von /assets/kv.js aufgebaut -->
         <div class="col stretch-third">
-          <ul class="pageMenu">
-            <li><a href="../" class="noUnderline">Kreisverband Wiesbaden</a></li>
-            <li><a href="../Vorstand/" class="noUnderline">Vorstand</a></li>
-            <li><a href="../Fraktion/" class="noUnderline">Fraktion</a></li>
-            <li><a href="../Menschen/" class="noUnderline">Menschen</a></li>
-            <li><a href="../Program/" class="noUnderline">Programm</a></li>
-            <li><a href="../Termine/" class="noUnderline">Termine</a></li>
-            <li><a href="../Mitreden/" class="noUnderline">Mitreden</a></li>
-            <li><a href="../Aktuelles/" class="noUnderline">Aktuelles</a></li>
-            <li><a href="../Social_Media/" class="noUnderline">Social Media</a></li>
-            <li><a href="../Kontakt/" class="noUnderline">Kontakt</a></li>
-            
-            <!-- "active" ist hier gesetzt -->
-            <li class="active"><a href="../Downloadbereich/" class="noUnderline">Downloadbereich</a></li>
-          </ul>
+          <ul class="pageMenu" id="kv-menu"></ul>
         </div>
 
         <!-- MAIN CONTENT -->
@@ -177,9 +162,9 @@
                         <div class="kv-text">
 
                           <section class="kv-section">
-                            <h2>Materialien & Dokumente</h2>
+                            <h2 id="kv-heading">Materialien & Dokumente</h2>
                             <p>Hier finden Sie wichtige Dokumente, Formulare und Informationsmaterialien des BSW Wiesbaden zum Herunterladen.</p>
-                            <p class="placeholder">Platzhalter – hier werden die Dateien dynamisch aus der JSON geladen.</p>
+                            <div id="kv-intro"></div>
                             
                             <!-- Container für die dynamischen Daten -->
                             <div id="downloads-container">
@@ -269,47 +254,9 @@
 
 </div>
 
-<!-- JAVASCRIPT FÜR DYNAMISCHE DATEN -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    fetch('downloads.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Netzwerkantwort war nicht ok");
-        }
-        return response.json();
-      })
-      .then(data => {
-        const container = document.getElementById('downloads-container');
-        container.innerHTML = ''; 
-        
-        const listDiv = document.createElement('div');
-        listDiv.className = 'download-list';
-
-        data.forEach(item => {
-          const itemDiv = document.createElement('div');
-          itemDiv.className = 'download-item';
-          itemDiv.innerHTML = `
-            <div class="download-info">
-              <div class="download-title">${item.title}</div>
-              <div class="download-desc">${item.description}</div>
-              <div class="download-meta">${item.type} • ${item.size}</div>
-            </div>
-            <div class="download-action">
-              <a href="${item.file}" target="_blank" class="btn-download" download>Herunterladen</a>
-            </div>
-          `;
-          listDiv.appendChild(itemDiv);
-        });
-        
-        container.appendChild(listDiv);
-      })
-      .catch(error => {
-        console.error('Fehler beim Laden der JSON-Daten:', error);
-        document.getElementById('downloads-container').innerHTML = '<p style="color:red;">Fehler beim Laden der Daten. (Bitte über python3 -m http.server aufrufen)</p>';
-      });
-  });
-</script>
+<!-- Inhalte: /assets/kv.js lädt die JSON-Datei dieser Seite -->
+<script src="/assets/kv.js"></script>
+<script>KV.init('downloads');</script>
 
 </body>
 </html>

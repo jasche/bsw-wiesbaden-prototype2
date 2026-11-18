@@ -1,17 +1,16 @@
-[
-  {
-    "datum": "10. November 2026",
-    "titel": "Erster BSW-Stammtisch in Wiesbaden ein voller Erfolg",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Zahlreiche interessierte Bürgerinnen und Bürger folgten unserer Einladung in die Innenstadt. Wir bedanken uns für die angeregten Diskussionen und die vielen neuen Impulse für unsere kommunalpolitische Arbeit."
-  },
-  {
-    "datum": "28. Oktober 2026",
-    "titel": "BSW Wiesbaden fordert mehr Transparenz im Stadtrat",
-    "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Wir setzen uns für offene Ausschüsse, klare Kommunikation und eine stärkere Einbindung der Bürgerinnen und Bürger bei wichtigen Entscheidungen ein."
-  },
-  {
-    "datum": "15. September 2026",
-    "titel": "Neue Kandidaten für die Kommunalwahl nominiert",
-    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Unser Kreisverband freut sich, ein starkes Team für die kommenden Wahlen aufstellen zu können. Gemeinsam wollen wir Wiesbaden zukunftsfähig machen."
-  }
-]
+{
+  "ueberschrift": "Neuigkeiten aus Wiesbaden",
+  "einleitung": "",
+  "eintraege": [
+    {
+      "datum": "25. Juni 2026",
+      "titel": "Neuer Vorstand: BSW Wiesbaden stellt den Frieden in den Mittelpunkt",
+      "text": "Der Kreisverband Wiesbaden des BSW hat einen neuen Vorstand. Auf der Mitgliederversammlung am 24. Juni 2026 wählten die Mitglieder Eugen Appelhans zum Kreisvorsitzenden. Appelhans gehört seit April 2026 dem Magistrat der Landeshauptstadt an. Schatzmeister wurde der Stadtverordnete Veit Wilhelmy. Komplettiert wird der Vorstand von zwei Co-Vorsitzenden und vier Beisitzern. Der bisherige Vorstand wurde einstimmig entlastet.\nInhaltlich setzt der Kreisverband einen klaren Schwerpunkt: Frieden. Wiesbaden ist Sitz des Hauptquartiers der US-Armee für Europa und Afrika, die NATO koordiniert hier einen Großteil der Militärhilfe für die Ukraine. „Unsere Stadt ist ein Drehkreuz in diesem Krieg. Das ist nicht passiv. Dafür will ich die Wiesbadener sensibilisieren“, sagt Appelhans. Der Vorstand will das Thema mit Veranstaltungen, Informationsangeboten und Präsenz im Stadtgebiet sichtbar machen."
+    },
+    {
+      "datum": "19. Mai 2026",
+      "titel": "Abrüstung schafft Wohnraum: Anfrage zu US-Liegenschaften",
+      "text": "Die USA wollen ihre Truppen in Deutschland reduzieren. Was heißt das für Wiesbaden? In Bierstadt, Erbenheim und Mainz-Kastel wohnen heute US-Soldatinnen und -Soldaten außerhalb der Kasernen. Unsere Rathausfraktion hat den Magistrat gefragt, welche Erkenntnisse zur Truppenreduzierung vorliegen, ob Gespräche über die Nutzung freiwerdender Gebäude laufen und ob ein gemeinsamer Wohnungsfonds mit den US-Streitkräften denkbar ist.\nUnser Ziel: leerstehenden Wohnraum schrittweise für Wiesbadener Familien öffnen. Gelebte Friedenspolitik heißt auch: Abrüstung schafft Wohnraum."
+    }
+  ]
+}

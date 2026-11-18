@@ -1,26 +1,31 @@
-[
-  {
-    "name": "Max Mustermann",
-    "role": "Kreisvorsitzender",
-    "email": "vorsitz@bsw-wiesbaden.de",
-    "phone": "+49 611 1234567"
-  },
-  {
-    "name": "Erika Mustermann",
-    "role": "Stellvertretende Vorsitzende",
-    "email": "stv-vorsitz@bsw-wiesbaden.de",
-    "phone": ""
-  },
-  {
-    "name": "Hans Beispiel",
-    "role": "Pressesprecher",
-    "email": "presse@bsw-wiesbaden.de",
-    "phone": "+49 611 7654321"
-  },
-  {
-    "name": "Geschäftsstelle Wiesbaden",
-    "role": "Allgemeine Anfragen",
-    "email": "kontakt@bsw-wiesbaden.de",
-    "phone": ""
-  }
-]
+{
+  "ueberschrift": "So erreichen Sie uns",
+  "einleitung": "Schreiben Sie uns gern. Wir antworten in der Regel innerhalb weniger Tage.",
+  "eintraege": [
+    {
+      "name": "Eugen Appelhans",
+      "role": "Kreisvorsitzender",
+      "email": "[E-Mail ergänzen]",
+      "phone": ""
+    },
+    {
+      "name": "[Name]",
+      "role": "Pressekontakt",
+      "email": "[E-Mail ergänzen]",
+      "phone": ""
+    },
+    {
+      "name": "Fraktion FREIE WÄHLER/BSW/BIG",
+      "role": "Fraktion im Rathaus",
+      "email": "[E-Mail ergänzen]",
+      "phone": ""
+    },
+    {
+      "name": "BSW Kreisverband Wiesbaden",
+      "role": "Allgemeine Anfragen",
+      "email": "[E-Mail ergänzen]",
+      "phone": ""
+    }
+  ],
+  "hinweis": "Ihre Angaben verwenden wir nur zur Bearbeitung Ihrer Anfrage. Mehr dazu in unserer [Datenschutzerklärung](https://he.bsw-vg.de/datenschutz/)."
+}

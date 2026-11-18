@@ -1,0 +1,466 @@
+# Sveltia CMS – Konfiguration für bsw-wiesbaden-kv.de
+# Jede "Seite" unten entspricht genau einer JSON-Datei im Repo.
+# Speichern im CMS = Commit auf main = GitHub Pages veröffentlicht nach ca. 1 Minute.
+# (ausgeschrieben, ohne YAML-Anker – robust für alle Parser)
+
+backend:
+  name: github
+  repo: jasche/bsw-wiesbaden-prototype2
+  branch: main
+  commit_messages:
+    update: 'Redaktion: {{collection}} „{{slug}}“ aktualisiert'
+    uploadMedia: 'Redaktion: Datei „{{path}}“ hochgeladen'
+site_url: https://www.bsw-wiesbaden-kv.de
+display_url: https://www.bsw-wiesbaden-kv.de
+logo_url: https://he.bsw-vg.de/wp-content/uploads/2025/12/bsw-he-logo.svg
+media_folder: uploads
+public_folder: /uploads
+collections:
+- name: seiten
+  label: Seiten
+  label_singular: Seite
+  editor:
+    preview: false
+  files:
+  - name: kreisverband
+    label: Kreisverband Wiesbaden (inkl. Startseite)
+    file: Kreisverband_Wiesbaden/kreisverband.json
+    format: json
+    fields:
+    - label: Startseite (oberer Bereich)
+      name: startseite
+      widget: object
+      fields:
+      - label: Schlagzeile
+        name: titel
+        widget: string
+      - widget: text
+        required: false
+        hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+        label: Text
+        name: text
+    - label: Überschrift
+      name: ueberschrift
+      widget: string
+      required: false
+    - label: Einleitung
+      name: einleitung
+      widget: text
+      required: false
+      hint: 'Jede Zeile = ein Absatz. Formatierung: **fett**, *kursiv*, [Linktext](https://…), Zeile mit ''- '' = Aufzählung, ''### '' = Zwischenüberschrift, ''> '' = Zitat.'
+    - label: Leitlinien (Kacheln)
+      name: leitlinien
+      widget: list
+      summary: '{{fields.titel}}'
+      fields:
+      - label: Titel
+        name: titel
+        widget: string
+      - widget: text
+        required: false
+        hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+        label: Text
+        name: text
+    - widget: text
+      required: false
+      hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+      label: Abschnitt „Unsere Stimme im Rathaus“
+      name: rathaus
+    - label: Spenden
+      name: spenden
+      widget: object
+      fields:
+      - label: Kontoinhaber
+        name: kontoinhaber
+        widget: string
+      - label: IBAN
+        name: iban
+        widget: string
+      - label: Verwendungszweck
+        name: verwendungszweck
+        widget: string
+      - label: Hinweis (rot, optional)
+        name: hinweis
+        widget: string
+        required: false
+  - name: vorstand
+    label: Vorstand
+    file: Vorstand/vorstand.json
+    format: json
+    fields:
+    - label: Überschrift
+      name: ueberschrift
+      widget: string
+      required: false
+    - label: Einleitung
+      name: einleitung
+      widget: text
+      required: false
+      hint: 'Jede Zeile = ein Absatz. Formatierung: **fett**, *kursiv*, [Linktext](https://…), Zeile mit ''- '' = Aufzählung, ''### '' = Zwischenüberschrift, ''> '' = Zitat.'
+    - label: Vorstandsmitglieder
+      name: eintraege
+      widget: list
+      summary: '{{fields.name}} – {{fields.role}}'
+      fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: Funktion
+        name: role
+        widget: string
+      - label: Foto (quadratisch)
+        name: foto
+        widget: image
+        required: false
+        hint: Nur mit schriftlicher Einwilligung der Person.
+      - widget: text
+        required: false
+        hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+        label: Kurzprofil
+        name: bio
+    - widget: text
+      required: false
+      hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+      label: Schlusswort / Wort des Vorsitzenden
+      name: schlusswort
+  - name: fraktion
+    label: Fraktion
+    file: Fraktion/fraktion.json
+    format: json
+    fields:
+    - label: Überschrift
+      name: ueberschrift
+      widget: string
+      required: false
+    - label: Einleitung
+      name: einleitung
+      widget: text
+      required: false
+      hint: 'Jede Zeile = ein Absatz. Formatierung: **fett**, *kursiv*, [Linktext](https://…), Zeile mit ''- '' = Aufzählung, ''### '' = Zwischenüberschrift, ''> '' = Zitat.'
+    - label: Mandatsträger
+      name: eintraege
+      widget: list
+      summary: '{{fields.name}}'
+      fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: Funktion
+        name: role
+        widget: string
+      - label: Foto (quadratisch)
+        name: foto
+        widget: image
+        required: false
+        hint: Nur mit schriftlicher Einwilligung der Person.
+      - widget: text
+        required: false
+        hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+        label: Kurzprofil
+        name: bio
+    - widget: text
+      required: false
+      hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+      label: Arbeitsweise, Initiativen, Kontakt
+      name: arbeit
+  - name: menschen
+    label: Menschen
+    file: Menschen/menschen.json
+    format: json
+    fields:
+    - label: Überschrift
+      name: ueberschrift
+      widget: string
+      required: false
+    - label: Einleitung
+      name: einleitung
+      widget: text
+      required: false
+      hint: 'Jede Zeile = ein Absatz. Formatierung: **fett**, *kursiv*, [Linktext](https://…), Zeile mit ''- '' = Aufzählung, ''### '' = Zwischenüberschrift, ''> '' = Zitat.'
+    - label: Porträts
+      name: eintraege
+      widget: list
+      summary: '{{fields.name}}'
+      fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: Funktion
+        name: role
+        widget: string
+      - label: Foto (quadratisch)
+        name: foto
+        widget: image
+        required: false
+        hint: Nur mit schriftlicher Einwilligung der Person.
+      - widget: text
+        required: false
+        hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+        label: Kurzprofil
+        name: bio
+      hint: Nur echte, von der Person freigegebene Aussagen.
+  - name: program
+    label: Programm
+    file: Program/program.json
+    format: json
+    fields:
+    - label: Überschrift
+      name: ueberschrift
+      widget: string
+      required: false
+    - label: Einleitung
+      name: einleitung
+      widget: text
+      required: false
+      hint: 'Jede Zeile = ein Absatz. Formatierung: **fett**, *kursiv*, [Linktext](https://…), Zeile mit ''- '' = Aufzählung, ''### '' = Zwischenüberschrift, ''> '' = Zitat.'
+    - label: Themen
+      name: eintraege
+      widget: list
+      summary: '{{fields.title}}'
+      fields:
+      - label: Thema
+        name: title
+        widget: string
+      - widget: text
+        required: false
+        hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+        label: Text
+        name: text
+      - label: Gut zu sagen (Kernsatz)
+        name: gut_zu_sagen
+        widget: string
+        required: false
+  - name: termine
+    label: Termine
+    file: Termine/termine.json
+    format: json
+    fields:
+    - label: Überschrift
+      name: ueberschrift
+      widget: string
+      required: false
+    - label: Einleitung
+      name: einleitung
+      widget: text
+      required: false
+      hint: 'Jede Zeile = ein Absatz. Formatierung: **fett**, *kursiv*, [Linktext](https://…), Zeile mit ''- '' = Aufzählung, ''### '' = Zwischenüberschrift, ''> '' = Zitat.'
+    - label: Termine
+      name: eintraege
+      widget: list
+      add_to_top: true
+      summary: '{{fields.datum}} – {{fields.titel}}'
+      hint: Vergangene Termine bitte löschen.
+      fields:
+      - label: Titel
+        name: titel
+        widget: string
+      - label: Datum (z. B. 4. Dezember 2026)
+        name: datum
+        widget: string
+      - label: Uhrzeit
+        name: uhrzeit
+        widget: string
+        required: false
+      - label: Ort (mit Adresse)
+        name: ort
+        widget: string
+      - widget: text
+        required: false
+        hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+        label: Beschreibung
+        name: beschreibung
+  - name: mitreden
+    label: Mitreden
+    file: Mitreden/mitreden.json
+    format: json
+    fields:
+    - label: Überschrift
+      name: ueberschrift
+      widget: string
+      required: false
+    - label: Einleitung
+      name: einleitung
+      widget: text
+      required: false
+      hint: 'Jede Zeile = ein Absatz. Formatierung: **fett**, *kursiv*, [Linktext](https://…), Zeile mit ''- '' = Aufzählung, ''### '' = Zwischenüberschrift, ''> '' = Zitat.'
+    - label: Mitmach-Karten
+      name: eintraege
+      widget: list
+      summary: '{{fields.title}}'
+      fields:
+      - label: Titel
+        name: title
+        widget: string
+      - widget: text
+        required: false
+        hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+        label: Text
+        name: text
+      - label: Link
+        name: link
+        widget: string
+        required: false
+      - label: Button-Text
+        name: action
+        widget: string
+        required: false
+    - label: Überschrift Fragen
+      name: fragen_ueberschrift
+      widget: string
+      required: false
+    - label: Häufige Fragen
+      name: fragen
+      widget: list
+      summary: '{{fields.frage}}'
+      fields:
+      - label: Frage
+        name: frage
+        widget: string
+      - widget: text
+        required: false
+        hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+        label: Antwort
+        name: antwort
+  - name: aktuelles
+    label: Aktuelles
+    file: Aktuelles/aktuelles.json
+    format: json
+    fields:
+    - label: Überschrift
+      name: ueberschrift
+      widget: string
+      required: false
+    - label: Einleitung
+      name: einleitung
+      widget: text
+      required: false
+      hint: 'Jede Zeile = ein Absatz. Formatierung: **fett**, *kursiv*, [Linktext](https://…), Zeile mit ''- '' = Aufzählung, ''### '' = Zwischenüberschrift, ''> '' = Zitat.'
+    - label: Meldungen (neueste oben)
+      name: eintraege
+      widget: list
+      add_to_top: true
+      summary: '{{fields.datum}} – {{fields.titel}}'
+      hint: Die obersten drei Meldungen erscheinen auch auf der Startseite.
+      fields:
+      - label: Datum (z. B. 25. Juni 2026)
+        name: datum
+        widget: string
+      - label: Titel
+        name: titel
+        widget: string
+      - widget: text
+        required: false
+        hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+        label: Text
+        name: text
+  - name: social
+    label: Social Media
+    file: Social_Media/social_media.json
+    format: json
+    fields:
+    - label: Überschrift
+      name: ueberschrift
+      widget: string
+      required: false
+    - label: Einleitung
+      name: einleitung
+      widget: text
+      required: false
+      hint: 'Jede Zeile = ein Absatz. Formatierung: **fett**, *kursiv*, [Linktext](https://…), Zeile mit ''- '' = Aufzählung, ''### '' = Zwischenüberschrift, ''> '' = Zitat.'
+    - label: Kanäle
+      name: eintraege
+      widget: list
+      summary: '{{fields.platform}}'
+      fields:
+      - label: Plattform
+        name: platform
+        widget: string
+      - label: Link
+        name: url
+        widget: string
+      - label: Beschreibung
+        name: description
+        widget: string
+    - widget: text
+      required: false
+      hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+      label: Netiquette
+      name: netiquette
+  - name: kontakt
+    label: Kontakt
+    file: Kontakt/kontakt.json
+    format: json
+    fields:
+    - label: Überschrift
+      name: ueberschrift
+      widget: string
+      required: false
+    - label: Einleitung
+      name: einleitung
+      widget: text
+      required: false
+      hint: 'Jede Zeile = ein Absatz. Formatierung: **fett**, *kursiv*, [Linktext](https://…), Zeile mit ''- '' = Aufzählung, ''### '' = Zwischenüberschrift, ''> '' = Zitat.'
+    - label: Ansprechpartner
+      name: eintraege
+      widget: list
+      summary: '{{fields.role}} – {{fields.name}}'
+      fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: Funktion
+        name: role
+        widget: string
+      - label: E-Mail
+        name: email
+        widget: string
+        required: false
+        hint: Funktionsadresse, keine private Adresse.
+      - label: Telefon
+        name: phone
+        widget: string
+        required: false
+    - widget: text
+      required: false
+      hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
+      label: Hinweis unter den Kontakten
+      name: hinweis
+  - name: downloads
+    label: Downloadbereich
+    file: Downloadbereich/downloads.json
+    format: json
+    fields:
+    - label: Überschrift
+      name: ueberschrift
+      widget: string
+      required: false
+    - label: Einleitung
+      name: einleitung
+      widget: text
+      required: false
+      hint: 'Jede Zeile = ein Absatz. Formatierung: **fett**, *kursiv*, [Linktext](https://…), Zeile mit ''- '' = Aufzählung, ''### '' = Zwischenüberschrift, ''> '' = Zitat.'
+    - label: Dateien
+      name: eintraege
+      widget: list
+      add_to_top: true
+      summary: '{{fields.title}}'
+      fields:
+      - label: Titel
+        name: title
+        widget: string
+      - label: Beschreibung
+        name: description
+        widget: string
+        required: false
+      - label: Datei
+        name: file
+        widget: file
+        hint: Nur Material mit geklärten Bild- und Musikrechten hochladen.
+      - label: Dateityp (z. B. PDF)
+        name: type
+        widget: string
+        required: false
+      - label: Größe (z. B. 2,5 MB)
+        name: size
+        widget: string
+        required: false

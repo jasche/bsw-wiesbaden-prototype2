@@ -1,10 +1,25 @@
 {
-  "intro_text": [
-    "<b>Lorem ipsum dolor sit amet, consectetur adipiscing elit – für ein friedliches, sicheres, soziales und wirtschaftlich starkes Wiesbaden.</b>",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  "startseite": {
+    "titel": "Frieden beginnt vor Ort. Auch in Wiesbaden.",
+    "text": "Wir sind das BSW – Bündnis Soziale Gerechtigkeit und Wirtschaftliche Vernunft – in der hessischen Landeshauptstadt. Wir stehen für Diplomatie statt Aufrüstung, für bezahlbares Wohnen und für eine Stadt, die zuerst für ihre Bürgerinnen und Bürger da ist.\n[Mitreden](/Mitreden/) · [Termine](/Termine/) · [Förderer werden](https://he.bsw-vg.de/spenden/)"
+  },
+  "ueberschrift": "Willkommen beim BSW Wiesbaden",
+  "einleitung": "In kaum einer deutschen Stadt ist die Frage von Krieg und Frieden so nah wie in Wiesbaden. In der Lucius-D.-Clay-Kaserne in Erbenheim sitzt das Hauptquartier der US-Armee für Europa und Afrika; von hier aus wird ein großer Teil der militärischen Unterstützung für die Ukraine koordiniert. Eine Stadt, die so tief in diesen Krieg eingebunden ist, braucht eine Stimme für Verhandlungen, Abrüstung und Entspannung. Diese Stimme wollen wir sein.\nGleichzeitig erleben die Menschen in Wiesbaden jeden Tag, wohin falsche Prioritäten führen: Der Verteidigungsetat des Bundes ist binnen zwei Jahren von 52 auf 108 Milliarden Euro gestiegen, während Mieten steigen, Kliniken um ihre Existenz kämpfen und die Stadt neue Schulden machen muss, um Schulen und Straßen instand zu halten. Das wollen wir umdrehen.",
+  "leitlinien": [
+    {
+      "titel": "Frieden nach außen",
+      "text": "Diplomatie statt Drehkreuz. Wiesbaden soll für Entspannung stehen, nicht als Zielscheibe dienen.\n[Zum Programm](/Program/)"
+    },
+    {
+      "titel": "Gerechtigkeit nach innen",
+      "text": "Bezahlbare Mieten, gute Renten, Tariflöhne. Wer arbeitet oder ein Leben lang eingezahlt hat, muss in Wiesbaden gut leben können.\n[Zum Programm](/Program/)"
+    },
+    {
+      "titel": "Vernunft statt Ideologie",
+      "text": "Bezahlbare Energie, ein ÖPNV, der funktioniert, und eine Migrationspolitik mit Herz und Verstand.\n[Zum Programm](/Program/)"
+    }
   ],
+  "rathaus": "### Unsere Stimme im Rathaus\nSeit der Kommunalwahl im März 2026 ist das BSW in der Wiesbadener Stadtverordnetenversammlung vertreten und arbeitet in der Fraktion FREIE WÄHLER/BSW/BIG mit. Unser Kreisvorsitzender Eugen Appelhans gehört dem ehrenamtlichen Magistrat an. [Zur Fraktion](/Fraktion/)",
   "spenden": {
     "kontoinhaber": "Kreisverband BSW Wiesbaden (Platzhalter)",
     "iban": "DE00 0000 0000 0000 0000 00 (Platzhalter)",

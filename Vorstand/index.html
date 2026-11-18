@@ -84,22 +84,9 @@
 
     <div class="container padding component">
       <div class="row gap-80 topicsRow">
-        
-        <!-- SIDEBAR MENU -->
+        <!-- SIDEBAR MENU: wird von /assets/kv.js aufgebaut -->
         <div class="col stretch-third">
-          <ul class="pageMenu">
-            <li><a href="../" class="noUnderline">Kreisverband Wiesbaden</a></li>
-            <li class="active"><a href="../Vorstand/" class="noUnderline">Vorstand</a></li>
-            <li><a href="../Fraktion/" class="noUnderline">Fraktion</a></li>
-            <li><a href="../Menschen/" class="noUnderline">Menschen</a></li>
-            <li><a href="../Program/" class="noUnderline">Programm</a></li>
-            <li><a href="../Termine/" class="noUnderline">Termine</a></li>
-            <li><a href="../Mitreden/" class="noUnderline">Mitreden</a></li>
-            <li><a href="../Aktuelles/" class="noUnderline">Aktuelles</a></li>
-            <li><a href="../Social_Media/" class="noUnderline">Social Media</a></li>
-            <li><a href="../Kontakt/" class="noUnderline">Kontakt</a></li>
-            <li><a href="../Downloadbereich/" class="noUnderline">Downloadbereich</a></li>
-          </ul>
+          <ul class="pageMenu" id="kv-menu"></ul>
         </div>
 
         <!-- MAIN CONTENT -->
@@ -114,13 +101,14 @@
                         <div class="kv-text">
 
                           <section class="kv-section">
-                            <h2>Der Vorstand des Kreisverbands Wiesbaden</h2>
-                            <p class="placeholder">Platzhalter – hier werden die Mitglieder des Vorstands vorgestellt.</p>
+                            <h2 id="kv-heading">Der Vorstand des Kreisverbands Wiesbaden</h2>
+                            <div id="kv-intro"></div>
                             
                             <!-- Dieser Container wird per JavaScript mit Inhalt gefüllt -->
                             <div id="vorstand-container">
                               <p>Lade Daten...</p>
                             </div>
+                            <div id="kv-outro"></div>
 
                           </section>
 
@@ -205,39 +193,9 @@
 
 </div>
 
-<!-- JAVASCRIPT FÜR DYNAMISCHE DATEN -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Daten aus der JSON-Datei laden
-    fetch('vorstand.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Netzwerkantwort war nicht ok");
-        }
-        return response.json();
-      })
-      .then(data => {
-        const container = document.getElementById('vorstand-container');
-        // Den "Lade Daten..." Text entfernen
-        container.innerHTML = ''; 
-        
-        // Für jedes Mitglied im JSON einen HTML-Block bauen
-        data.forEach(member => {
-          const memberDiv = document.createElement('div');
-          memberDiv.innerHTML = `
-            <h3 style="margin-bottom: 0.2em;">${member.name}</h3>
-            <p style="margin-bottom: 0.8em;"><b>${member.role}</b></p>
-            <p>${member.bio}</p>
-          `;
-          container.appendChild(memberDiv);
-        });
-      })
-      .catch(error => {
-        console.error('Fehler beim Laden der JSON-Daten:', error);
-        document.getElementById('vorstand-container').innerHTML = '<p style="color:red;">Fehler beim Laden der Daten. (Bitte über einen lokalen Server aufrufen, z.B. python3 -m http.server)</p>';
-      });
-  });
-</script>
+<!-- Inhalte: /assets/kv.js lädt die JSON-Datei dieser Seite -->
+<script src="/assets/kv.js"></script>
+<script>KV.init('vorstand');</script>
 
 </body>
 </html>

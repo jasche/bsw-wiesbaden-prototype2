@@ -1,22 +1,19 @@
-[
-  {
-    "name": "Dr. Sabine Musterfrau",
-    "role": "Fraktionsvorsitzende",
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
-  },
-  {
-    "name": "Thomas Beispiel",
-    "role": "Stellvertretender Fraktionsvorsitzender",
-    "bio": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  },
-  {
-    "name": "Anna Platzhalter",
-    "role": "Stadtverordnete",
-    "bio": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-  },
-  {
-    "name": "Peter Test",
-    "role": "Stadtverordneter",
-    "bio": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-  }
-]
+{
+  "ueberschrift": "Das BSW im Wiesbadener Rathaus",
+  "einleitung": "Bei der Kommunalwahl am 15. März 2026 hat das BSW den Einzug in die Wiesbadener Stadtverordnetenversammlung geschafft. Unser Stadtverordneter Veit Wilhelmy arbeitet in der Fraktion FREIE WÄHLER/BSW/BIG, die mit drei Mitgliedern im Stadtparlament vertreten ist. Im ehrenamtlichen Magistrat, der Stadtregierung, sitzt für das BSW Stadtrat Eugen Appelhans.",
+  "eintraege": [
+    {
+      "name": "Veit Wilhelmy",
+      "role": "Stadtverordneter, Fraktion FREIE WÄHLER/BSW/BIG",
+      "foto": "",
+      "bio": "[Kurzprofil, Ausschüsse, Schwerpunkte]"
+    },
+    {
+      "name": "Eugen Appelhans",
+      "role": "Ehrenamtlicher Stadtrat im Magistrat",
+      "foto": "",
+      "bio": "[Kurzprofil, Schwerpunkte]"
+    }
+  ],
+  "arbeit": "### Wie wir arbeiten\n- **Inhalte vor Absender:** Wir stimmen nach der Sache ab, nicht danach, wer einen Antrag gestellt hat. Gute Vorschläge unterstützen wir, egal von wem.\n- **Zuhören:** Wir laden regelmäßig zu Sprechstunden ein und nehmen Anliegen aus den Ortsbezirken mit ins Rathaus.\n- **Klare Grenze:** Eine Zusammenarbeit mit der AfD schließen wir aus. In der Steuer-, Sozial- und Friedenspolitik stehen wir auf der entgegengesetzten Seite.\n\n### Unsere Initiativen\n- **Qualitätsmanagement in der Stadtverwaltung (23.09.2026):** Antrag Nr. 26-F-31-0007 – von Einzelmaßnahmen zu einem verbindlichen Steuerungssystem. [Antragstext (PDF)](/Downloadbereich/Antragstext.pdf)\n- **Abrüstung schafft Wohnraum (Mai 2026):** Anfrage an den Magistrat, welche Erkenntnisse zur angekündigten Reduzierung der US-Truppen vorliegen, ob Gespräche über die zivile Nutzung freiwerdender Wohngebäude in Bierstadt, Erbenheim und Mainz-Kastel laufen und ob ein gemeinsamer Wohnungsfonds mit den US-Streitkräften denkbar ist.\n\n**Kontakt zur Fraktion:** Rathaus, Schlossplatz 6, 65183 Wiesbaden · [E-Mail ergänzen]"
+}

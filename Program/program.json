@@ -1,18 +1,51 @@
-[
-  {
-    "title": "Wirtschaft und Arbeit",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-  },
-  {
-    "title": "Soziales und Zusammenhalt",
-    "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  },
-  {
-    "title": "Verkehr und Infrastruktur",
-    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-  },
-  {
-    "title": "Bildung und Kultur",
-    "text": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-  }
-]
+{
+  "ueberschrift": "Unser Programm für Wiesbaden",
+  "einleitung": "Das BSW steht für Soziale Gerechtigkeit und Wirtschaftliche Vernunft – und für Frieden und Meinungsfreiheit. Was das bundesweit heißt, steht im [Programm der Bundespartei](https://he.bsw-vg.de/partei/programm/). Hier zeigen wir, was es für Wiesbaden bedeutet. Unser Maßstab ist einfach: Wer arbeitet, Kinder erzieht, Angehörige pflegt oder ein Leben lang eingezahlt hat, muss in dieser Stadt gut und sicher leben können.",
+  "eintraege": [
+    {
+      "title": "Frieden: Diplomatie statt Drehkreuz",
+      "text": "Wiesbaden ist nicht irgendeine Stadt in der Friedensfrage. In der Lucius-D.-Clay-Kaserne sitzt das Hauptquartier der US-Armee für Europa und Afrika mit rund 3.000 Soldatinnen und Soldaten. Die NATO koordiniert hier seit Dezember 2024 mit der Mission NSATU einen Großteil der militärischen Unterstützung für die Ukraine. Hier wurde auch die 2. Multi-Domain Task Force der US-Armee aufgebaut, für die ab 2026 Tomahawk-Marschflugkörper und Hyperschallraketen vorgesehen waren – Waffen, die bis tief nach Russland reichen. Im Mai 2026 haben die USA diese Stationierung vorerst abgesagt.\nWir lehnen alle Kriege ab, ausdrücklich auch den russischen Angriff auf die Ukraine. Aber dieser Krieg hätte vermieden und längst beendet werden können. Nach Schätzungen des CSIS sterben rund 300 Menschen pro Tag. Wer das Sterben beenden will, muss verhandeln.\n**Unsere Forderungen für Wiesbaden**\n- **Keine Mittelstreckenwaffen in Wiesbaden** – weder amerikanische noch einen europäischen Ersatz. Wer solche Waffen hier stationiert, macht unsere Stadt im Ernstfall zur Zielscheibe.\n- **Transparenz:** Der Magistrat soll offenlegen, welche Risiken die militärische Rolle Wiesbadens für die Bevölkerung mit sich bringt und wie es um den Zivilschutz steht.\n- **Stadt der Diplomatie:** Wiesbaden soll seine Städtepartnerschaften und seine Rolle als Landeshauptstadt für Dialog nutzen, mit regelmäßigen Friedensforen im Rathaus.\n- **Konversion statt Konfrontation:** Werden US-Liegenschaften frei, sollen sie für bezahlbares Wohnen und zivile Nutzung gesichert werden.\n**Bundesweit setzen wir uns ein für** eine verteidigungsfähige Bundeswehr ohne Rekordausgaben, bei denen jeder fünfte Euro in Fehlplanung versickert, gegen die Wehrpflicht und für eine NATO, die wieder ein defensives Bündnis ist. Die NATO-Staaten geben schon heute rund das Zehnfache Russlands für Militär aus.",
+      "gut_zu_sagen": "„Wir wollen unser Land friedenstüchtig machen, nicht kriegstüchtig – und Wiesbaden kann dabei vorangehen.“"
+    },
+    {
+      "title": "Bezahlbar wohnen",
+      "text": "Wiesbaden gehört zu den teuersten Wohnungsmärkten in Hessen. Wer heute eine Wohnung sucht, zahlt im Schnitt rund 14,40 Euro kalt pro Quadratmeter, im Neubau über 20 Euro. Das trifft Familien, Pflegekräfte, Erzieherinnen, Busfahrer und Rentner zuerst.\n**Unsere Forderungen für Wiesbaden**\n- Städtische Wohnungsbaugesellschaften stärken, statt Flächen an Investoren zu vergeben.\n- In großen Entwicklungsgebieten wie dem Ostfeld einen hohen Anteil dauerhaft bezahlbarer Wohnungen festschreiben.\n- Freiwerdende Militärliegenschaften für bezahlbares Wohnen sichern.\n- Geförderte Wohnungen dürfen nicht aus der Mietpreisbindung fallen.\n**Bundesweit:** Mietendeckel in angespannten Märkten und ein großes öffentliches Wohnungsbauprogramm. Beides gehört zusammen.",
+      "gut_zu_sagen": "„Abrüstung schafft Wohnraum.“"
+    },
+    {
+      "title": "Gute Rente, faire Löhne",
+      "text": "Jeder fünfte Rentner in Deutschland bekommt weniger als 1.200 Euro im Monat, mehr als 770.000 Rentner brauchen zusätzlich Sozialhilfe. In einer Stadt mit so hohen Lebenshaltungskosten wie Wiesbaden reicht das erst recht nicht.\n- **Rente nach österreichischem Vorbild:** Alle zahlen ein, auch Abgeordnete, Minister, Selbstständige und mittelfristig Beamte. In Österreich erhalten Rentner im Schnitt rund 600 Euro mehr im Monat. Wir wollen 75 Prozent Rentenniveau, eine Mindestrente bis 1.500 Euro und Steuerfreiheit für Renten bis 2.000 Euro.\n- **15 Euro Mindestlohn**, dauerhaft gekoppelt an 60 Prozent des Medianlohns.\n- **Tariftreue in Wiesbaden:** Aufträge der Stadt und ihrer Gesellschaften nur an Unternehmen, die Tariflöhne zahlen. Bundesweit arbeiten nur noch 49 Prozent der Beschäftigten tarifgebunden.",
+      "gut_zu_sagen": "„Bessere Renten sind möglich und überhaupt kein Problem, wenn alle einzahlen.“"
+    },
+    {
+      "title": "Gesundheit und Pflege",
+      "text": "Die Bundesregierung will 2027 knapp 19 Milliarden Euro bei der medizinischen Versorgung kürzen, Zuzahlungen für Medikamente sollen um 50 Prozent steigen. Das trifft auch Wiesbadener Kliniken, Praxen und Pflegedienste. Bundesweit ist jedes dritte Krankenhaus von Insolvenz bedroht.\n- Keine Klinik und keine Station in Wiesbaden darf schließen, bevor die Versorgung nachweislich anderweitig gesichert ist.\n- Bürgerversicherung für alle statt Zwei-Klassen-Medizin.\n- Pflege darf nicht arm machen: steuerfinanzierte Pflegevollversicherung, bessere Löhne und verlässliche Dienstpläne für Pflegekräfte.",
+      "gut_zu_sagen": "„Gute Versorgung darf weder vom Einkommen noch vom Wohnort abhängen.“"
+    },
+    {
+      "title": "Stadtfinanzen: Investieren statt kaputtsparen",
+      "text": "Wiesbaden schreibt rote Zahlen. Der Haushalt 2026 sieht eine Nettoneuverschuldung von über 100 Millionen Euro vor, die Rücklagen sind weitgehend aufgebraucht – und im selben Haushalt steht ein Sanierungsprogramm für Schultoiletten. Bundesweit verzeichneten die Kommunen 2024 ein Rekorddefizit von 24,8 Milliarden Euro. Das ist kein Wiesbadener Sonderfall, sondern die Folge falscher Prioritäten in Berlin und bei der Landesregierung: Für Aufrüstung werden die Schuldenregeln gelockert, für Schulen und Brücken nicht.\n- Investitionen in Schulen, Brücken, Netze und Wohnungen raus aus der Schuldenbremse – die Militarisierung nicht.\n- Wer bestellt, bezahlt: Bund und Land müssen Aufgaben, die sie den Kommunen übertragen, voll finanzieren.\n- Keine Kürzungen bei Bildung, Verbraucherberatung und sozialer Infrastruktur zulasten der Wiesbadener.",
+      "gut_zu_sagen": "„Ein kaputtes Land spart sich nicht gesund – aber Panzer schaffen keinen Mehrwert.“"
+    },
+    {
+      "title": "Energie mit Vernunft",
+      "text": "- Bezahlbare Energie für Haushalte und Betriebe: Nein zur CO2-Abgabe, Netzentgelte für Verbraucher abschaffen.\n- Solar zuerst auf Dächer, Parkhäuser, Parkplätze und Gewerbeflächen – nicht auf Ackerland.\n- Energie in Bürgerhand: Wiesbadenerinnen und Wiesbadener sollen sich an Anlagen der städtischen Versorger beteiligen können, damit vor Ort verdient wird, was vor Ort erzeugt wird.",
+      "gut_zu_sagen": "„Klimaschutz und Industrie sind kein Gegensatz.“"
+    },
+    {
+      "title": "Mobilität für Pendler und Stadtteile",
+      "text": "Wiesbaden ist Pendlerstadt im Rhein-Main-Gebiet. Viele sind auf Bus und Bahn angewiesen, viele auf das Auto.\n- Ein bezahlbarer, eng getakteter ÖPNV nach Schweizer Vorbild, auch in den Außenstadtteilen.\n- Sichere Radwege, getrennt vom Autoverkehr.\n- Große Verkehrsprojekte nur mit den Bürgern: Über eine Straßenbahn haben die Wiesbadener 2020 per Bürgerentscheid entschieden. Wer das Thema neu aufrollt, muss sie wieder fragen.\n- Technologieoffenheit statt Verbrennerverbot und ein Volksleasing zum Preis des Deutschlandtickets.",
+      "gut_zu_sagen": "„Wir wollen bezahlbare und umweltfreundliche Autos aus europäischer Produktion, mit Technologieoffenheit statt Verbrennerverbot.“"
+    },
+    {
+      "title": "Migration mit Herz und Verstand",
+      "text": "Menschen mit Migrationsgeschichte gehören zu Wiesbaden, und das ist gut so. Damit Integration gelingt, brauchen Kitas, Schulen und der Wohnungsmarkt Luft. Wir vertreten die realistische Mitte: Kontrolle und Begrenzung ja, Abschiebung gut integrierter Menschen nein, das Asylrecht bleibt. Wer schwere Straftaten begeht oder kein Aufenthaltsrecht hat, muss ausreisen. Die Kosten dürfen nicht an der Stadt hängen bleiben. Und: Die wirksamste Migrationspolitik ist Friedenspolitik – weniger Krieg, weniger Flucht.",
+      "gut_zu_sagen": "„Migration braucht Grenzen, damit Integration funktionieren kann.“"
+    },
+    {
+      "title": "Freiheit und Mitsprache",
+      "text": "Nur 46 Prozent der Deutschen glauben laut Allensbach, ihre Meinung frei äußern zu können. Wir wollen eine Stadtpolitik, in der unbequeme Fragen erlaubt sind.\n- Bürgerdialoge und Sprechstunden in allen Ortsbezirken, Ortsbeiräte stärken.\n- Digitale Verwaltung, die den Bürgern dient – mit garantiertem analogem Zugang im Bürgerbüro.\n- Datenschutz und digitale Souveränität: städtische Daten gehören nicht in die Hände von US-Konzernen.",
+      "gut_zu_sagen": "„Was nicht verboten ist, muss gesagt werden dürfen – ohne Angst um Job oder Ansehen.“"
+    }
+  ]
+}

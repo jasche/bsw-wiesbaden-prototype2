@@ -83,25 +83,9 @@
 
     <div class="container padding component">
       <div class="row gap-80 topicsRow">
-        
-        <!-- SIDEBAR MENU -->
+        <!-- SIDEBAR MENU: wird von /assets/kv.js aufgebaut -->
         <div class="col stretch-third">
-          <ul class="pageMenu">
-            <li><a href="../" class="noUnderline">Kreisverband Wiesbaden</a></li>
-            <li><a href="../Vorstand/" class="noUnderline">Vorstand</a></li>
-            <li><a href="../Fraktion/" class="noUnderline">Fraktion</a></li>
-            
-            <!-- "active" ist hier gesetzt -->
-            <li class="active"><a href="../Menschen/" class="noUnderline">Menschen</a></li>
-            
-            <li><a href="../Program/" class="noUnderline">Programm</a></li>
-            <li><a href="../Termine/" class="noUnderline">Termine</a></li>
-            <li><a href="../Mitreden/" class="noUnderline">Mitreden</a></li>
-            <li><a href="../Aktuelles/" class="noUnderline">Aktuelles</a></li>
-            <li><a href="../Social_Media/" class="noUnderline">Social Media</a></li>
-            <li><a href="../Kontakt/" class="noUnderline">Kontakt</a></li>
-            <li><a href="../Downloadbereich/" class="noUnderline">Downloadbereich</a></li>
-          </ul>
+          <ul class="pageMenu" id="kv-menu"></ul>
         </div>
 
         <!-- MAIN CONTENT -->
@@ -116,8 +100,8 @@
                         <div class="kv-text">
 
                           <section class="kv-section">
-                            <h2>Die Menschen hinter dem BSW Wiesbaden</h2>
-                            <p class="placeholder">Platzhalter – hier werden Kandidaten, Mitglieder und Unterstützer vorgestellt.</p>
+                            <h2 id="kv-heading">Die Menschen hinter dem BSW Wiesbaden</h2>
+                            <div id="kv-intro"></div>
                             
                             <!-- Container für die dynamischen Daten -->
                             <div id="menschen-container">
@@ -207,36 +191,9 @@
 
 </div>
 
-<!-- JAVASCRIPT FÜR DYNAMISCHE DATEN -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    fetch('menschen.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Netzwerkantwort war nicht ok");
-        }
-        return response.json();
-      })
-      .then(data => {
-        const container = document.getElementById('menschen-container');
-        container.innerHTML = ''; 
-        
-        data.forEach(person => {
-          const personDiv = document.createElement('div');
-          personDiv.innerHTML = `
-            <h3 style="margin-bottom: 0.2em;">${person.name}</h3>
-            <p style="margin-bottom: 0.8em;"><b>${person.role}</b></p>
-            <p>${person.bio}</p>
-          `;
-          container.appendChild(personDiv);
-        });
-      })
-      .catch(error => {
-        console.error('Fehler beim Laden der JSON-Daten:', error);
-        document.getElementById('menschen-container').innerHTML = '<p style="color:red;">Fehler beim Laden der Daten. (Bitte über python3 -m http.server aufrufen)</p>';
-      });
-  });
-</script>
+<!-- Inhalte: /assets/kv.js lädt die JSON-Datei dieser Seite -->
+<script src="/assets/kv.js"></script>
+<script>KV.init('menschen');</script>
 
 </body>
 </html>

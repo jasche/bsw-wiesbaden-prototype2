@@ -1,20 +1,55 @@
-[
-  {
-    "title": "Aktiv mitgestalten",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Werden Sie Teil unserer Bewegung und gestalten Sie die Wiesbadener Kommunalpolitik aktiv mit.",
-    "link": "https://bsw-vg.de/unterstuetzer-werden/",
-    "action": "Mitglied werden"
-  },
-  {
-    "title": "Ihre Ideen einbringen",
-    "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Sie haben Anregungen, Kritik oder ein konkretes Anliegen in Ihrem Stadtteil? Schreiben Sie uns!",
-    "link": "../Kontakt/",
-    "action": "Idee einreichen"
-  },
-  {
-    "title": "Stammtisch besuchen",
-    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Kommen Sie zu unserem monatlichen Stammtisch und diskutieren Sie in entspannter Atmosphäre mit.",
-    "link": "../Termine/",
-    "action": "Zu den Terminen"
-  }
-]
+{
+  "ueberschrift": "Mitreden, mitmachen, mitgestalten",
+  "einleitung": "Sie haben ein Anliegen, das ins Rathaus gehört? Sie wollen bei Aktionen mithelfen oder uns finanziell unterstützen? Es gibt viele Wege, beim BSW Wiesbaden mitzureden.",
+  "eintraege": [
+    {
+      "title": "Ihr Anliegen fürs Rathaus",
+      "text": "Schreiben Sie uns. Wir melden uns und nehmen Ihr Thema in unsere Arbeit in Stadtverordnetenversammlung und Magistrat mit.",
+      "link": "/Kontakt/",
+      "action": "Anliegen schicken"
+    },
+    {
+      "title": "Unterstützer werden",
+      "text": "Sie registrieren sich, erhalten Informationen und können bei Infoständen und Veranstaltungen mitmachen.",
+      "link": "https://bsw-vg.de/unterstuetzer-werden/",
+      "action": "Unterstützer werden"
+    },
+    {
+      "title": "Förderer werden",
+      "text": "Sie unterstützen unsere Arbeit finanziell.",
+      "link": "https://he.bsw-vg.de/spenden/",
+      "action": "Förderer werden"
+    }
+  ],
+  "fragen_ueberschrift": "Häufige Fragen und unsere Antworten",
+  "fragen": [
+    {
+      "frage": "Was hat Friedenspolitik im Rathaus zu suchen?",
+      "antwort": "In Wiesbaden sehr viel. Die militärische Rolle unserer Stadt betrifft die Sicherheit der Bevölkerung, den Zivilschutz, Liegenschaften und Wohnraum. Und jeder Euro, der bundesweit in Aufrüstung fließt, fehlt den Kommunen für Schulen, Kliniken und Busse."
+    },
+    {
+      "frage": "Die US-Armee ist doch gut für Wiesbaden?",
+      "antwort": "Die Amerikanerinnen und Amerikaner in Wiesbaden sind unsere Nachbarn. Kritik an der Politik der US-Regierung ist kein Antiamerikanismus. Wer Wiesbaden aber zum Knotenpunkt eines Krieges macht, muss die Risiken offen benennen. Und wenn Truppen reduziert werden, wollen wir vorbereitet sein: mit Plänen für Wohnungen, zivile Nutzung und Arbeitsplätze."
+    },
+    {
+      "frage": "Ist das BSW nicht russlandfreundlich?",
+      "antwort": "Nein. Wir verurteilen den russischen Angriff auf die Ukraine. Die Verantwortung dafür trägt Moskau. Verstehen ist aber nicht Verständnis: Dass die NATO-Osterweiterung und die vertane Chance von Istanbul 2022 die Lage verschärft haben, lässt sich nachprüfen. Dauerhaften Frieden in Europa gibt es nur mit, nicht gegen Russland – ohne Unterordnung unter Moskau und ohne Bruch mit Washington."
+    },
+    {
+      "frage": "Wollt ihr raus aus der NATO?",
+      "antwort": "Nein. Wir wollen die NATO zu einem defensiven Bündnis zurückbauen, das die UN-Charta achtet und abrüstet. Deutschland soll seine Stimme im Bündnis dafür nutzen."
+    },
+    {
+      "frage": "Wer Frieden will, muss die Ukraine doch weiter aufrüsten?",
+      "antwort": "Mit jedem Tag Krieg verliert die Ukraine mehr Menschen und mehr Land. Wer Waffenlieferungen zur einzigen Antwort erklärt, lässt die Menschen dort im Stich. Ein Verhandlungsfrieden ist möglich, das haben die Gespräche von Istanbul im Frühjahr 2022 gezeigt."
+    },
+    {
+      "frage": "Seid ihr nicht eine zweite AfD?",
+      "antwort": "Wer nur auf ein Thema schaut, sieht Ähnlichkeiten; wer aufs Gesamtprogramm schaut, sieht die Unterschiede. Die AfD will eine Flat-Tax und keine Vermögensteuer, sie steht für Aufrüstung. Wir stehen für Abrüstung, gute Renten und eine gerechte Besteuerung großer Vermögen. Eine Koalition mit der AfD ist ausgeschlossen."
+    },
+    {
+      "frage": "Wie wollt ihr das alles bezahlen?",
+      "antwort": "Indem alle in die Rente einzahlen, extreme Vermögen ab 25 Millionen Euro wieder besteuert werden und das Geld nicht in Aufrüstung fließt. Einkommen bis 7.500 Euro brutto im Monat wollen wir entlasten."
+    }
+  ]
+}

@@ -123,25 +123,9 @@
 
     <div class="container padding component">
       <div class="row gap-80 topicsRow">
-        
-        <!-- SIDEBAR MENU -->
+        <!-- SIDEBAR MENU: wird von /assets/kv.js aufgebaut -->
         <div class="col stretch-third">
-          <ul class="pageMenu">
-            <li><a href="../" class="noUnderline">Kreisverband Wiesbaden</a></li>
-            <li><a href="../Vorstand/" class="noUnderline">Vorstand</a></li>
-            <li><a href="../Fraktion/" class="noUnderline">Fraktion</a></li>
-            <li><a href="../Menschen/" class="noUnderline">Menschen</a></li>
-            <li><a href="../Program/" class="noUnderline">Programm</a></li>
-            <li><a href="../Termine/" class="noUnderline">Termine</a></li>
-            <li><a href="../Mitreden/" class="noUnderline">Mitreden</a></li>
-            <li><a href="../Aktuelles/" class="noUnderline">Aktuelles</a></li>
-            <li><a href="../Social_Media/" class="noUnderline">Social Media</a></li>
-            
-            <!-- "active" ist hier gesetzt -->
-            <li class="active"><a href="../Kontakt/" class="noUnderline">Kontakt</a></li>
-            
-            <li><a href="../Downloadbereich/" class="noUnderline">Downloadbereich</a></li>
-          </ul>
+          <ul class="pageMenu" id="kv-menu"></ul>
         </div>
 
         <!-- MAIN CONTENT -->
@@ -156,9 +140,9 @@
                         <div class="kv-text">
 
                           <section class="kv-section">
-                            <h2>Kontaktieren Sie uns</h2>
+                            <h2 id="kv-heading">Kontaktieren Sie uns</h2>
                             <p>Haben Sie Fragen, Anregungen oder möchten Sie sich bei uns engagieren? Wir freuen uns auf Ihre Nachricht. Hier finden Sie die richtigen Ansprechpartner für Ihr Anliegen.</p>
-                            <p class="placeholder">Platzhalter – hier werden die Kontaktdaten dynamisch geladen.</p>
+                            <div id="kv-intro"></div>
                             
                             <!-- Container für die dynamischen Daten -->
                             <div id="kontakt-container">
@@ -248,57 +232,9 @@
 
 </div>
 
-<!-- JAVASCRIPT FÜR DYNAMISCHE DATEN -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    fetch('kontakt.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Netzwerkantwort war nicht ok");
-        }
-        return response.json();
-      })
-      .then(data => {
-        const container = document.getElementById('kontakt-container');
-        container.innerHTML = ''; 
-        
-        // Wrapper für das CSS-Grid erstellen
-        const gridDiv = document.createElement('div');
-        gridDiv.className = 'contact-grid';
-
-        data.forEach(person => {
-          const card = document.createElement('div');
-          card.className = 'contact-card';
-          
-          // Telefonnummer nur anzeigen, wenn vorhanden
-          let phoneHtml = '';
-          if (person.phone) {
-            phoneHtml = `
-              <div class="contact-detail">
-                <span>📞</span> <a href="tel:${person.phone.replace(/\s/g, '')}">${person.phone}</a>
-              </div>
-            `;
-          }
-
-          card.innerHTML = `
-            <div class="contact-role">${person.role}</div>
-            <h3 class="contact-name">${person.name}</h3>
-            <div class="contact-detail">
-              <span>✉️</span> <a href="mailto:${person.email}">${person.email}</a>
-            </div>
-            ${phoneHtml}
-          `;
-          gridDiv.appendChild(card);
-        });
-        
-        container.appendChild(gridDiv);
-      })
-      .catch(error => {
-        console.error('Fehler beim Laden der JSON-Daten:', error);
-        document.getElementById('kontakt-container').innerHTML = '<p style="color:red;">Fehler beim Laden der Daten. (Bitte über python3 -m http.server aufrufen)</p>';
-      });
-  });
-</script>
+<!-- Inhalte: /assets/kv.js lädt die JSON-Datei dieser Seite -->
+<script src="/assets/kv.js"></script>
+<script>KV.init('kontakt');</script>
 
 </body>
 </html>

@@ -76,24 +76,9 @@
 
     <div class="container padding component">
       <div class="row gap-80 topicsRow">
-        
-        <!-- SIDEBAR MENU -->
+        <!-- SIDEBAR MENU: wird von /assets/kv.js aufgebaut -->
         <div class="col stretch-third">
-          <ul class="pageMenu">
-            <!-- "active" ist hier gesetzt, da wir uns auf der Kreisverband-Seite befinden -->
-            <li class="active"><a href="../Kreisverband_Wiesbaden/" class="noUnderline">Kreisverband Wiesbaden</a></li>
-            
-            <li><a href="../Vorstand/" class="noUnderline">Vorstand</a></li>
-            <li><a href="../Fraktion/" class="noUnderline">Fraktion</a></li>
-            <li><a href="../Menschen/" class="noUnderline">Menschen</a></li>
-            <li><a href="../Program/" class="noUnderline">Programm</a></li>
-            <li><a href="../Termine/" class="noUnderline">Termine</a></li>
-            <li><a href="../Mitreden/" class="noUnderline">Mitreden</a></li>
-            <li><a href="../Aktuelles/" class="noUnderline">Aktuelles</a></li>
-            <li><a href="../Social_Media/" class="noUnderline">Social Media</a></li>
-            <li><a href="../Kontakt/" class="noUnderline">Kontakt</a></li>
-            <li><a href="../Downloadbereich/" class="noUnderline">Downloadbereich</a></li>
-          </ul>
+          <ul class="pageMenu" id="kv-menu"></ul>
         </div>
 
         <!-- MAIN CONTENT -->
@@ -109,6 +94,8 @@
 
                           <!-- Container für den dynamischen Text (Einleitung) -->
                           <section id="ueber-uns" class="kv-section">
+                            <h2 id="kv-heading"></h2>
+                            <div id="kv-intro"></div>
                             <div id="intro-container">
                               <p>Lade Daten...</p>
                             </div>
@@ -203,43 +190,9 @@
 
 </div>
 
-<!-- JAVASCRIPT FÜR DYNAMISCHE DATEN -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Lädt die kreisverband.json aus demselben Ordner
-    fetch('kreisverband.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Netzwerkantwort war nicht ok");
-        }
-        return response.json();
-      })
-      .then(data => {
-        // 1. Intro-Text laden
-        const introContainer = document.getElementById('intro-container');
-        introContainer.innerHTML = ''; 
-        data.intro_text.forEach(paragraph => {
-          const p = document.createElement('p');
-          p.innerHTML = paragraph;
-          introContainer.appendChild(p);
-        });
-
-        // 2. Spenden-Infos laden
-        const spendenContainer = document.getElementById('spenden-container');
-        spendenContainer.innerHTML = `
-          <p><b>Kontoinhaber:</b> ${data.spenden.kontoinhaber}</p>
-          <p><b>IBAN:</b> ${data.spenden.iban}</p>
-          <p><b>Verwendungszweck:</b> ${data.spenden.verwendungszweck}</p>
-          <p class="placeholder">${data.spenden.hinweis}</p>
-        `;
-      })
-      .catch(error => {
-        console.error('Fehler beim Laden der JSON-Daten:', error);
-        document.getElementById('intro-container').innerHTML = '<p style="color:red;">Fehler beim Laden der Daten. (Bitte über python3 -m http.server aufrufen)</p>';
-        document.getElementById('spenden-container').innerHTML = '';
-      });
-  });
-</script>
+<!-- Inhalte: /assets/kv.js lädt die JSON-Datei dieser Seite -->
+<script src="/assets/kv.js"></script>
+<script>KV.init('kreisverband');</script>
 
 </body>
 </html>

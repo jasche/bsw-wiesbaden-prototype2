@@ -1,22 +1,22 @@
-[
-  {
-    "platform": "Facebook",
-    "url": "https://www.facebook.com/bsw.hessen",
-    "description": "Folgen Sie uns auf Facebook für aktuelle News und Diskussionen."
-  },
-  {
-    "platform": "Instagram",
-    "url": "https://www.instagram.com/bsw.hessen/",
-    "description": "Einblicke in unsere Arbeit, Events und den Kommunalwahlkampf."
-  },
-  {
-    "platform": "YouTube",
-    "url": "https://www.youtube.com/@BuendnisSahraWagenknecht",
-    "description": "Reden, Interviews und Videos auf unserem YouTube-Kanal."
-  },
-  {
-    "platform": "TikTok",
-    "url": "#",
-    "description": "Kurze Videos und spannende Einblicke (Platzhalter-Link)."
-  }
-]
+{
+  "ueberschrift": "Folgen Sie uns",
+  "einleitung": "Aktuelles aus dem Rathaus, Termine und Positionen gibt es auch auf unseren Kanälen. Bis die Kanäle des Kreisverbands starten, finden Sie hier den Landesverband Hessen.",
+  "eintraege": [
+    {
+      "platform": "Facebook",
+      "url": "https://www.facebook.com/bsw.hessen",
+      "description": "BSW Hessen auf Facebook: aktuelle Meldungen und Diskussionen."
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/bsw.hessen/",
+      "description": "BSW Hessen auf Instagram: Einblicke in unsere Arbeit und Veranstaltungen."
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/@BuendnisSahraWagenknecht",
+      "description": "Reden, Interviews und Videos."
+    }
+  ],
+  "netiquette": "*Netiquette:* Wir freuen uns über Diskussionen, auch kontroverse. Beleidigungen, Hetze und Falschbehauptungen löschen wir."
+}
