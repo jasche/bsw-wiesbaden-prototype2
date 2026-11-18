@@ -290,7 +290,7 @@
         var list = items(data);
         setHtml('downloads-container', list.length ? '<div class="download-list">' + list.map(function (d) {
           var meta = [d.type, d.size].filter(Boolean).map(esc).join(' • ');
-          return '<div class="download-item"><div class="download-info">' +
+          return '<div class="download-item">' + downloadThumb(d) + '<div class="download-info">' +
             '<div class="download-title">' + esc(d.title) + '</div>' +
             '<div class="download-desc">' + esc(d.description) + '</div>' +
             (meta ? '<div class="download-meta">' + meta + '</div>' : '') + '</div>' +
@@ -299,6 +299,20 @@
       }).catch(function (e) { showError('downloads-container', e); });
     }
   };
+
+  // Vorschaubild für den Downloadbereich: anklickbar, öffnet die Datei in neuem Tab.
+  // Reihenfolge: eigenes Vorschaubild (Feld "vorschau") > Bilddatei selbst > Symbol mit Dateityp
+  function downloadThumb(d) {
+    var file = safeUrl(d.file);
+    var isImage = /\.(jpe?g|png|gif|webp|svg)$/i.test(file);
+    var isVideo = /\.(mp4|webm|mov|m4v)$/i.test(file);
+    var src = d.vorschau ? safeUrl(d.vorschau) : (isImage ? file : '');
+    var label = 'Vorschau öffnen: ' + (d.title || file);
+    var inner = src
+      ? '<img src="' + esc(src) + '" alt="' + esc(label) + '" loading="lazy">'
+      : '<span class="kv-thumb-type">' + esc((file.split('.').pop() || 'Datei').toUpperCase()) + '</span>';
+    return '<a class="kv-thumb' + (isVideo ? ' kv-thumb-video' : '') + '" href="' + esc(file) + '" target="_blank" rel="noopener" title="' + esc(label) + '">' + inner + '</a>';
+  }
 
   function newsItem(n) {
     return '<div class="news-item"><span class="news-date">' + esc(n.datum) + '</span>' +
@@ -316,7 +330,15 @@
     '.kv-foto{width:120px;height:120px;object-fit:cover;border-radius:50%;float:right;margin:0 0 1em 1em}' +
     '.kv-person:after{content:"";display:block;clear:both}' +
     '.kv-empty{color:#666;font-style:italic}.kv-error{color:#b33}' +
-    '.kv-text ul{margin:0 0 1em 1.2em;list-style:disc}.kv-text li{margin-bottom:.4em;line-height:1.5}';
+    '.kv-text ul{margin:0 0 1em 1.2em;list-style:disc}.kv-text li{margin-bottom:.4em;line-height:1.5}' +
+    '.kv-thumb{position:relative;flex:0 0 120px;width:120px;height:160px;margin-right:20px;border-radius:4px;overflow:hidden;' +
+    'background:#f3eef1;border:1px solid #e5dbe1;display:flex;align-items:center;justify-content:center;text-decoration:none!important;transition:transform .2s ease,box-shadow .2s ease}' +
+    '.kv-thumb:hover{transform:translateY(-2px);box-shadow:0 4px 10px rgba(0,0,0,.15)}' +
+    '.kv-thumb img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}' +
+    '.kv-thumb-type{font-weight:bold;color:#661d4d;font-size:1.1em;letter-spacing:.05em}' +
+    '.kv-thumb-video:after{content:"";position:absolute;top:50%;left:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;' +
+    'background:rgba(102,29,77,.85) url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Cpath fill=%27white%27 d=%27M8 5v14l11-7z%27/%3E%3C/svg%3E") center/22px no-repeat}' +
+    '@media (max-width:600px){.kv-thumb{width:100%;flex-basis:auto;height:220px;margin:0 0 15px 0}}';
 
   function init(page) {
     var st = document.createElement('style');
