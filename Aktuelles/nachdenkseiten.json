@@ -3,6 +3,20 @@
   "quelle_url": "https://www.nachdenkseiten.de",
   "eintraege": [
     {
+      "titel": "Leserbriefe zu „Was geschah mit den Büchern der DDR?“",
+      "link": "https://www.nachdenkseiten.de/?p=159052",
+      "datum": "19. November 2026",
+      "iso": "2026-11-19T15:00:03+00:00",
+      "autor": "Redaktion"
+    },
+    {
+      "titel": "Entlastung für Schwarz-Rot. Und ein Wurstzipfel für Otto Normalverbraucher",
+      "link": "https://www.nachdenkseiten.de/?p=159133",
+      "datum": "19. November 2026",
+      "iso": "2026-11-19T13:00:37+00:00",
+      "autor": "Redaktion"
+    },
+    {
       "titel": "Nach dem Schlag gegen die Krim-Brücke kochen in Russland die Emotionen hoch",
       "link": "https://www.nachdenkseiten.de/?p=159121",
       "datum": "19. November 2026",
@@ -17,7 +31,7 @@
       "autor": "Jens Berger"
     },
     {
-      "titel": "BSW-Klage abgelehnt: Verfassungsgericht beschädigt die Demokratie",
+      "titel": "BSW-Beschwerde abgelehnt: Verfassungsgericht beschädigt die Demokratie",
       "link": "https://www.nachdenkseiten.de/?p=159102",
       "datum": "19. November 2026",
       "iso": "2026-11-19T09:08:41+00:00",
@@ -56,20 +70,6 @@
       "link": "https://www.nachdenkseiten.de/?p=159073",
       "datum": "18. November 2026",
       "iso": "2026-11-18T12:00:51+00:00",
-      "autor": "Redaktion"
-    },
-    {
-      "titel": "Deutschlands nukleare Drohkulisse – und warum Abschreckung allein keine Sicherheit schafft",
-      "link": "https://www.nachdenkseiten.de/?p=159063",
-      "datum": "18. November 2026",
-      "iso": "2026-11-18T10:45:22+00:00",
-      "autor": "Redaktion"
-    },
-    {
-      "titel": "NachDenkSeiten für die Ohren – seit 2013 und immer noch von Menschen gesprochen",
-      "link": "https://www.nachdenkseiten.de/?p=159055",
-      "datum": "18. November 2026",
-      "iso": "2026-11-18T09:00:59+00:00",
       "autor": "Redaktion"
     }
   ]
