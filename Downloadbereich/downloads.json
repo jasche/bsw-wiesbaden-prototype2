@@ -1,30 +1,45 @@
 {
   "ueberschrift": "Material zum Lesen und Weitergeben",
   "einleitung": "",
-  "eintraege": [
+  "kategorien": [
     {
-      "title": "Plakat: Wiesbaden und der Krieg?",
-      "description": "Druckvorlage des Plakats für die Kundgebung am 4. Dezember 2026 vor dem RMCC.",
-      "file": "Flyer.jpeg",
-      "vorschau": "/Downloadbereich/vorschau/Flyer.jpg",
-      "type": "JPG (Bild)",
-      "size": "0,3 MB"
+      "titel": "Anträge",
+      "eintraege": [
+        {
+          "title": "Antrag Nr. 26-F-31-0007 FREIE WÄHLER/BSW/BIG",
+          "description": "Qualitätsmanagement in der Landeshauptstadt Wiesbaden – von Einzelmaßnahmen zu einem verbindlichen Steuerungssystem",
+          "file": "Antragstext.pdf",
+          "vorschau": "/Downloadbereich/vorschau/Antragstext.jpg",
+          "type": "PDF",
+          "size": "9 KB"
+        }
+      ]
     },
     {
-      "title": "Video: Aufruf zur Friedenskundgebung",
-      "description": "Videobotschaft des BSW Wiesbaden zur Mobilisierung für den 4. Dezember 2026.",
-      "file": "Song.mp4",
-      "vorschau": "/Downloadbereich/vorschau/Song.jpg",
-      "type": "MP4 (Video)",
-      "size": "3,2 MB"
+      "titel": "Plakate",
+      "eintraege": [
+        {
+          "title": "Plakat: Wiesbaden und der Krieg?",
+          "description": "Druckvorlage des Plakats für die Kundgebung am 4. Dezember 2026 vor dem RMCC.",
+          "file": "Flyer.jpeg",
+          "vorschau": "/Downloadbereich/vorschau/Flyer.jpg",
+          "type": "JPG (Bild)",
+          "size": "0,3 MB"
+        }
+      ]
     },
     {
-      "title": "Antrag Nr. 26-F-31-0007 FREIE WÄHLER/BSW/BIG",
-      "description": "Qualitätsmanagement in der Landeshauptstadt Wiesbaden – von Einzelmaßnahmen zu einem verbindlichen Steuerungssystem",
-      "file": "Antragstext.pdf",
-      "vorschau": "/Downloadbereich/vorschau/Antragstext.jpg",
-      "type": "PDF",
-      "size": "9 KB"
+      "titel": "Videos und Songs",
+      "eintraege": [
+        {
+          "title": "Video: Aufruf zur Friedenskundgebung",
+          "description": "Videobotschaft des BSW Wiesbaden zur Mobilisierung für den 4. Dezember 2026.",
+          "file": "Song.mp4",
+          "vorschau": "/Downloadbereich/vorschau/Song.jpg",
+          "type": "MP4 (Video)",
+          "size": "3,2 MB"
+        }
+      ]
     }
   ]
 }
