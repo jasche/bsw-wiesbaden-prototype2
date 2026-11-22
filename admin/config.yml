@@ -439,33 +439,42 @@ collections:
       widget: text
       required: false
       hint: 'Jede Zeile = ein Absatz. Formatierung: **fett**, *kursiv*, [Linktext](https://…), Zeile mit ''- '' = Aufzählung, ''### '' = Zwischenüberschrift, ''> '' = Zitat.'
-    - label: Dateien
-      name: eintraege
+      - label: Kategorien
+      name: kategorien
       widget: list
-      add_to_top: true
-      summary: '{{fields.title}}'
+      summary: '{{fields.titel}}'
+      hint: Die Reihenfolge hier ist die Reihenfolge auf der Seite. Neue Dateien in der passenden Kategorie hinzufügen.
       fields:
-      - label: Titel
-        name: title
+      - label: Überschrift der Kategorie
+        name: titel
         widget: string
-      - label: Beschreibung
-        name: description
-        widget: string
-        required: false
-      - label: Datei
-        name: file
-        widget: file
-        hint: Nur Material mit geklärten Bild- und Musikrechten hochladen.
-      - label: Vorschaubild (optional)
-        name: vorschau
-        widget: image
-        required: false
-        hint: Wird auf der Seite als anklickbare Vorschau gezeigt. Bei Bildern nicht nötig, bei Videos und PDFs empfohlen (z. B. Screenshot der ersten Seite).
-      - label: Dateityp (z. B. PDF)
-        name: type
-        widget: string
-        required: false
-      - label: Größe (z. B. 2,5 MB)
-        name: size
-        widget: string
-        required: false
+      - label: Dateien
+        name: eintraege
+        widget: list
+        add_to_top: true
+        summary: '{{fields.title}}'
+        fields:
+        - label: Titel
+          name: title
+          widget: string
+        - label: Beschreibung
+          name: description
+          widget: string
+          required: false
+        - label: Datei
+          name: file
+          widget: file
+          hint: Nur Material mit geklärten Bild- und Musikrechten hochladen.
+        - label: Vorschaubild (optional)
+          name: vorschau
+          widget: image
+          required: false
+          hint: Wird auf der Seite als anklickbare Vorschau gezeigt. Bei Bildern nicht nötig, bei Videos und PDFs empfohlen (z. B. Screenshot der ersten Seite).
+        - label: Dateityp (z. B. PDF)
+          name: type
+          widget: string
+          required: false
+        - label: Größe (z. B. 2,5 MB)
+          name: size
+          widget: string
+          required: false
