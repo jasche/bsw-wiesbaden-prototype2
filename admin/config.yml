@@ -439,7 +439,7 @@ collections:
       widget: text
       required: false
       hint: 'Jede Zeile = ein Absatz. Formatierung: **fett**, *kursiv*, [Linktext](https://…), Zeile mit ''- '' = Aufzählung, ''### '' = Zwischenüberschrift, ''> '' = Zitat.'
-  - label: Kategorien
+    - label: Kategorien
       name: kategorien
       widget: list
       summary: '{{fields.titel}}'
