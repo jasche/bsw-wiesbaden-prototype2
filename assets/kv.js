@@ -368,5 +368,42 @@
     if (RENDER[page]) RENDER[page]();
   }
 
+  // ---------------------------------------------------------------------------
+  // Downloadbereich mit Kategorien (überschreibt den Download-Renderer weiter oben)
+  // Neue Struktur der JSON: { kategorien: [ { titel, eintraege: [ ... ] } ] }
+  // Die alte flache Struktur { eintraege: [ ... ] } wird weiterhin dargestellt.
+  // Überschriften-Design wie im Programm: BSW-Farbe, kleiner Abstand nach unten.
+  // ---------------------------------------------------------------------------
+  RENDER.downloads = function () {
+    function itemHtml(d) {
+      var meta = [d.type, d.size].filter(Boolean).map(esc).join(' • ');
+      return '<div class="download-item">' + downloadThumb(d) + '<div class="download-info">' +
+        '<div class="download-title">' + esc(d.title) + '</div>' +
+        '<div class="download-desc">' + esc(d.description) + '</div>' +
+        (meta ? '<div class="download-meta">' + meta + '</div>' : '') + '</div>' +
+        '<div class="download-action"><a href="' + esc(safeUrl(d.file)) + '" target="_blank" class="btn-download" download>Herunterladen</a></div></div>';
+    }
+    function listHtml(list) {
+      return '<div class="download-list">' + list.map(itemHtml).join('') + '</div>';
+    }
+    return load('downloads.json').then(function (data) {
+      header(data);
+      var cats = (data && Array.isArray(data.kategorien)) ? data.kategorien : [];
+      var html = '';
+      cats.forEach(function (c) {
+        var list = items(c);
+        if (!list.length) return;
+        html += '<div class="kv-kategorie" style="margin-bottom:2rem;padding-bottom:1rem;">' +
+          '<h3 style="color:#661d4d;margin-bottom:0.5em;">' + esc(c.titel) + '</h3>' + listHtml(list) + '</div>';
+      });
+      if (!html) {
+        var flat = items(data);
+        if (flat.length) html = listHtml(flat);
+      }
+      setHtml('downloads-container', html || emptyNote('Materialien folgen in Kürze.'));
+    }).catch(function (e) { showError('downloads-container', e); });
+  };
+
+
   window.KV = { init: init, md: md };
 })();
