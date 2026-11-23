@@ -19,8 +19,7 @@
     { id: 'aktuelles', label: 'Aktuelles', path: '/Aktuelles/' },
     { id: 'program', label: 'Programm', path: '/Program/' },
     { id: 'fraktion', label: 'Fraktion', path: '/Fraktion/' },
-    { id: 'menschen', label: 'Menschen', path: '/Menschen/' },
-    { id: 'vorstand', label: 'Vorstand', path: '/Vorstand/' },
+    { id: 'vorstand', label: 'Menschen', path: '/Vorstand/' },
     { id: 'termine', label: 'Termine', path: '/Termine/' },
     { id: 'social', label: 'Social Media', path: '/Social_Media/' },
     { id: 'downloads', label: 'Downloadbereich', path: '/Downloadbereich/' },
@@ -193,6 +192,8 @@
         var list = items(data);
         setHtml('vorstand-container', list.length ? personCards(list) : emptyNote('Die Vorstellung des Vorstands folgt in Kürze.'));
         setHtml('kv-outro', md(data.schlusswort));
+                var m = data.menschen || {};
+        setHtml('kv-menschen', (m.ueberschrift ? '<h2>' + esc(m.ueberschrift) + '</h2>' : '') + md(m.einleitung) + (m.hinweis ? emptyNote(m.hinweis) : ''));
       }).catch(function (e) { showError('vorstand-container', e); });
     },
 
