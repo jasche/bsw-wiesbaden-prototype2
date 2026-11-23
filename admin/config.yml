@@ -84,10 +84,27 @@ collections:
         widget: string
         required: false
   - name: vorstand
-    label: Vorstand
+    label: Menschen
     file: Vorstand/vorstand.json
     format: json
     fields:
+        - label: Abschnitt „Menschen im BSW Wiesbaden“ (oben auf der Seite)
+      name: menschen
+      widget: object
+      fields:
+      - label: Überschrift
+        name: ueberschrift
+        widget: string
+      - label: Text
+        name: einleitung
+        widget: text
+        required: false
+        hint: Jede Zeile = ein Absatz.
+      - label: Hinweis (kursiv, optional)
+        name: hinweis
+        widget: string
+        required: false
+        hint: 'z. B. „Porträts unserer Mitglieder folgen in Kürze.“ Leer lassen, wenn kein Hinweis erscheinen soll.'
     - label: Überschrift
       name: ueberschrift
       widget: string
@@ -163,42 +180,6 @@ collections:
       hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
       label: Arbeitsweise, Initiativen, Kontakt
       name: arbeit
-  - name: menschen
-    label: Menschen
-    file: Menschen/menschen.json
-    format: json
-    fields:
-    - label: Überschrift
-      name: ueberschrift
-      widget: string
-      required: false
-    - label: Einleitung
-      name: einleitung
-      widget: text
-      required: false
-      hint: 'Jede Zeile = ein Absatz. Formatierung: **fett**, *kursiv*, [Linktext](https://…), Zeile mit ''- '' = Aufzählung, ''### '' = Zwischenüberschrift, ''> '' = Zitat.'
-    - label: Porträts
-      name: eintraege
-      widget: list
-      summary: '{{fields.name}}'
-      fields:
-      - label: Name
-        name: name
-        widget: string
-      - label: Funktion
-        name: role
-        widget: string
-      - label: Foto (quadratisch)
-        name: foto
-        widget: image
-        required: false
-        hint: Nur mit schriftlicher Einwilligung der Person.
-      - widget: text
-        required: false
-        hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
-        label: Kurzprofil
-        name: bio
-      hint: Nur echte, von der Person freigegebene Aussagen.
   - name: program
     label: Programm
     file: Program/program.json
