@@ -353,6 +353,21 @@ collections:
         hint: Jede Zeile = ein Absatz. **fett**, *kursiv*, [Linktext](https://…), '- ' Aufzählung, '### ' Zwischenüberschrift, '> ' Zitat.
         label: Text
         name: text
+      - label: Flyer-Vorschaubild (optional)
+        name: bild
+        widget: image
+        required: false
+        hint: Kleines Bild, das unter dem Text als Link erscheint. Nur zusammen mit einem Link.
+      - label: Link, z. B. zu einem PDF (optional)
+        name: link
+        widget: string
+        required: false
+        hint: Pfad zur Datei, z. B. /Downloadbereich/Landeuro_Faltblatt.pdf
+      - label: Link-Text (optional)
+        name: link_text
+        widget: string
+        required: false
+        hint: Beschriftung unter dem Bild, z. B. Faltblatt als PDF ansehen
   - name: social
     label: Social Media
     file: Social_Media/social_media.json
