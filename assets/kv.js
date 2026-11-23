@@ -16,16 +16,16 @@
   // ---------------------------------------------------------------------------
   var MENU = [
     { id: 'kreisverband', label: 'Kreisverband Wiesbaden', path: '/Kreisverband_Wiesbaden/' },
-    { id: 'vorstand', label: 'Vorstand', path: '/Vorstand/' },
+    { id: 'aktuelles', label: 'Aktuelles', path: '/Aktuelles/' },
+    { id: 'program', label: 'Programm', path: '/Program/' },
     { id: 'fraktion', label: 'Fraktion', path: '/Fraktion/' },
     { id: 'menschen', label: 'Menschen', path: '/Menschen/' },
-    { id: 'program', label: 'Programm', path: '/Program/' },
+    { id: 'vorstand', label: 'Vorstand', path: '/Vorstand/' },
     { id: 'termine', label: 'Termine', path: '/Termine/' },
-    { id: 'mitreden', label: 'Mitreden', path: '/Mitreden/' },
-    { id: 'aktuelles', label: 'Aktuelles', path: '/Aktuelles/' },
     { id: 'social', label: 'Social Media', path: '/Social_Media/' },
-    { id: 'kontakt', label: 'Kontakt', path: '/Kontakt/' },
-    { id: 'downloads', label: 'Downloadbereich', path: '/Downloadbereich/' }
+    { id: 'downloads', label: 'Downloadbereich', path: '/Downloadbereich/' },
+    { id: 'mitreden', label: 'Mitreden', path: '/Mitreden/' },
+    { id: 'kontakt', label: 'Kontakt', path: '/Kontakt/' }
   ];
 
   // ---------------------------------------------------------------------------
