@@ -88,9 +88,9 @@ collections:
     file: Vorstand/vorstand.json
     format: json
     fields:
-      - label: Abschnitt „Menschen im BSW Wiesbaden“ (oben auf der Seite)
-        name: menschen
-        widget: object
+    - label: Abschnitt „Menschen im BSW Wiesbaden“ (oben auf der Seite)
+      name: menschen
+      widget: object
       fields:
       - label: Überschrift
         name: ueberschrift
