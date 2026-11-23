@@ -328,10 +328,30 @@
     return '<a class="kv-thumb' + (isVideo ? ' kv-thumb-video' : '') + '" href="' + esc(file) + '" target="_blank" rel="noopener" title="' + esc(label) + '">' + inner + '</a>';
   }
 
-  function newsItem(n) {
+    function newsItem(n) {
+    // Optional: Link (z. B. PDF) mit kleinem Vorschaubild unter dem Text
+    var flyer = '';
+    if (n.link) {
+      var linkText = n.link_text || 'Als PDF ansehen';
+      flyer = '<a class="kv-flyer" href="' + esc(safeUrl(n.link)) + '" target="_blank" rel="noopener">' +
+        (n.bild ? '<img src="' + esc(safeUrl(n.bild)) + '" alt="' + esc(linkText) + '" loading="lazy">' : '') +
+        '<span>' + esc(linkText) + '</span></a>';
+    }
     return '<div class="news-item"><span class="news-date">' + esc(n.datum) + '</span>' +
-      '<h3 class="news-title">' + esc(n.titel) + '</h3>' + md(n.text) + '</div>';
+      '<h3 class="news-title">' + esc(n.titel) + '</h3>' + md(n.text) + flyer + '</div>';
   }
+
+  // Darstellung des Flyer-Links (kleines Vorschaubild, in der Hausfarbe beschriftet)
+  (function () {
+    var s = document.createElement('style');
+    s.textContent = '.kv-flyer{display:inline-flex;flex-direction:column;align-items:flex-start;gap:.5em;margin-top:.5em;text-decoration:none!important}' +
+      '.kv-flyer img{width:170px;height:auto;border:1px solid #e5dbe1;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.12);transition:transform .2s ease,box-shadow .2s ease}' +
+      '.kv-flyer:hover img{transform:translateY(-2px);box-shadow:0 4px 10px rgba(0,0,0,.2)}' +
+      '.kv-flyer span{color:#661d4d;font-weight:600;font-size:.9em}' +
+      '.kv-flyer:hover span{text-decoration:underline}';
+    document.head.appendChild(s);
+  })();
+
 
   // ---------------------------------------------------------------------------
   // Einstieg: KV.init('program') im HTML der jeweiligen Seite
