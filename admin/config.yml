@@ -349,6 +349,60 @@ collections:
         widget: string
         required: false
         hint: Beschriftung unter dem Bild, z. B. Faltblatt als PDF ansehen
+  - name: presse
+    label: Presse (Pressemitteilungen)
+    file: Presse/presse.json
+    format: json
+    fields:
+    - label: Überschrift
+      name: ueberschrift
+      widget: string
+      required: false
+    - label: Einleitung
+      name: einleitung
+      widget: text
+      required: false
+    - label: Pressemitteilungen (neueste oben)
+      name: eintraege
+      widget: list
+      add_to_top: true
+      summary: '{{fields.datum}} – {{fields.titel}}'
+      hint: Die oberste veröffentlichte Mitteilung erscheint ausgeklappt, ältere zum Aufklappen.
+      fields:
+      - label: Veröffentlicht
+        name: veroeffentlicht
+        widget: boolean
+        default: false
+        hint: Erst nach Freigabe durch den Vorstand einschalten. Ausgeschaltet bleibt die Mitteilung im CMS, ist aber auf der Website unsichtbar.
+      - label: Datum (z. B. 25. Juni 2026)
+        name: datum
+        widget: string
+      - label: Titel
+        name: titel
+        widget: string
+      - label: Untertitel
+        name: untertitel
+        widget: string
+        required: false
+      - label: Kernpunkte (Aufzählung mit '- ')
+        name: kernpunkte
+        widget: text
+        required: false
+      - label: Text
+        name: text
+        widget: text
+        hint: Jede Zeile = ein Absatz. Zitat als eigene Zeile mit '> ' beginnen. **fett**, *kursiv*, [Linktext](https://…).
+      - label: PDF der Pressemitteilung (optional)
+        name: pdf
+        widget: file
+        required: false
+        media_folder: /Presse/pm
+        public_folder: /Presse/pm
+        hint: Dateiname JJMMTT_PM_Kurztitel.pdf, neue Versionen mit _v2, _v3.
+    - label: Pressekontakt (unter den Mitteilungen)
+      name: pressekontakt
+      widget: text
+      required: false
   - name: social
     label: Social Media
     file: Social_Media/social_media.json
