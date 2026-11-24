@@ -17,6 +17,7 @@
   var MENU = [
     { id: 'kreisverband', label: 'Kreisverband Wiesbaden', path: '/Kreisverband_Wiesbaden/' },
     { id: 'aktuelles', label: 'Aktuelles', path: '/Aktuelles/' },
+    { id: 'presse', label: 'Presse', path: '/Presse/' },
     { id: 'program', label: 'Programm', path: '/Program/' },
     { id: 'fraktion', label: 'Fraktion', path: '/Fraktion/' },
     { id: 'vorstand', label: 'Menschen', path: '/Vorstand/' },
@@ -273,6 +274,21 @@
       }).catch(function (e) { console.warn('Feed nicht geladen', e); });
     },
 
+    presse: function () {
+      return load('presse.json').then(function (data) {
+        header(data);
+        // Nur freigegebene Mitteilungen zeigen (Feld "veroeffentlicht" im CMS)
+        var list = items(data).filter(function (p) { return p.veroeffentlicht !== false; });
+        setHtml('presse-container', list.length
+          ? list.map(function (p, i) { return pmItem(p, i === 0); }).join('')
+          : emptyNote('Aktuelle Pressemitteilungen folgen in Kürze.'));
+        setHtml('kv-presse-kontakt', md(data.pressekontakt));
+        // Direktlink auf eine ältere Mitteilung: aufklappen und hinscrollen
+        var target = location.hash && document.getElementById(location.hash.slice(1));
+        if (target) { if (target.tagName === 'DETAILS') target.open = true; target.scrollIntoView(); }
+      }).catch(function (e) { showError('presse-container', e); });
+    },
+
     social: function () {
       return load('social_media.json').then(function (data) {
         header(data);
@@ -329,7 +345,28 @@
     return '<a class="kv-thumb' + (isVideo ? ' kv-thumb-video' : '') + '" href="' + esc(file) + '" target="_blank" rel="noopener" title="' + esc(label) + '">' + inner + '</a>';
   }
 
-    function newsItem(n) {
+    // Pressemitteilung: neueste ausgeklappt, ältere zum Aufklappen; Anker für Direktlinks (#pm-…)
+  function pmSlug(p) {
+    return 'pm-' + String(p.titel || '').toLowerCase()
+      .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60);
+  }
+
+  function pmBody(p) {
+    return (p.untertitel ? '<p class="kv-pm-sub">' + esc(p.untertitel) + '</p>' : '') +
+      (p.kernpunkte ? '<div class="kv-pm-key">' + md(p.kernpunkte) + '</div>' : '') +
+      md(p.text) +
+      (p.pdf ? '<p><a class="btn-bsw" href="' + esc(safeUrl(p.pdf)) + '" target="_blank" rel="noopener" download>PDF herunterladen</a></p>' : '');
+  }
+
+  function pmItem(p, open) {
+    var head = '<span class="news-date">Wiesbaden, ' + esc(p.datum) + '</span><h3 class="news-title">' + esc(p.titel) + '</h3>';
+    var id = pmSlug(p);
+    if (open) return '<article class="kv-pm" id="' + id + '">' + head + pmBody(p) + '</article>';
+    return '<details class="kv-pm" id="' + id + '"><summary>' + head + '</summary>' + pmBody(p) + '</details>';
+  }
+
+  function newsItem(n) {
     // Optional: Link (z. B. PDF) mit kleinem Vorschaubild unter dem Text
     var flyer = '';
     if (n.link) {
@@ -373,6 +410,13 @@
     '.kv-thumb-type{font-weight:bold;color:#661d4d;font-size:1.1em;letter-spacing:.05em}' +
     '.kv-thumb-video:after{content:"";position:absolute;top:50%;left:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;' +
     'background:rgba(102,29,77,.85) url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Cpath fill=%27white%27 d=%27M8 5v14l11-7z%27/%3E%3C/svg%3E") center/22px no-repeat}' +
+    '.kv-pm{display:block;padding:1.5em 0;border-bottom:1px solid #eee}' +
+    '.kv-pm summary{cursor:pointer;list-style:none}.kv-pm summary::-webkit-details-marker{display:none}' +
+    '.kv-pm summary .news-title:after{content:" ▸";color:#661d4d}.kv-pm[open] summary .news-title:after{content:" ▾"}' +
+    '.kv-pm-sub{font-weight:600;font-size:1.05em}' +
+    '.kv-pm-key{background:#faf6f8;border-left:4px solid #661d4d;padding:.8em 1em .2em;margin:1em 0}' +
+    '.kv-pm-key ul{margin:0 0 .6em 1.2em;list-style:disc}' +
+    '#kv-presse-kontakt{margin-top:2.5em}' +
     '#kv-feed{margin-top:3em;padding-top:1.5em;border-top:1px solid #eee}' +
     '.kv-text ul.kv-feed-list{list-style:none;margin:0 0 1em 0;padding:0}' +
     '.kv-feed-list li{padding:.7em 0;border-bottom:1px solid #f0f0f0}' +
