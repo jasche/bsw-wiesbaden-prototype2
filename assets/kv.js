@@ -425,7 +425,22 @@
     '.kv-feed-note{font-size:.85em;color:#777}' +
     '@media (max-width:600px){.kv-thumb{width:100%;flex-basis:auto;height:220px;margin:0 0 15px 0}}';
 
+  // Favicon (BSW-"B" wie beim Landesverband Hessen), Dateien liegen lokal in /assets/icons/
+  function favicons() {
+    if (document.querySelector('link[rel~="icon"]')) return;
+    [['icon', '/assets/icons/favicon-32.png', '32x32'],
+     ['icon', '/assets/icons/favicon-192.png', '192x192'],
+     ['apple-touch-icon', '/assets/icons/apple-touch-icon.png', '180x180']
+    ].forEach(function (f) {
+      var l = document.createElement('link');
+      l.rel = f[0]; l.href = f[1]; l.sizes = f[2];
+      if (f[0] === 'icon') l.type = 'image/png';
+      document.head.appendChild(l);
+    });
+  }
+
   function init(page) {
+    favicons();
     var st = document.createElement('style');
     st.textContent = STYLE;
     document.head.appendChild(st);
