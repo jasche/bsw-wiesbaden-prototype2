@@ -3,6 +3,20 @@
   "quelle_url": "https://www.nachdenkseiten.de",
   "eintraege": [
     {
+      "titel": "Videohinweise am Mittwoch",
+      "link": "https://www.nachdenkseiten.de/?p=159401",
+      "datum": "25. November 2026",
+      "iso": "2026-11-25T15:36:34+00:00",
+      "autor": "Redaktion"
+    },
+    {
+      "titel": "Leserbriefe zu „Magdeburger Weg statt Fraktionszwang!“ und „Der Magdeburger Holzweg – eine Replik auf Diether Dehm“",
+      "link": "https://www.nachdenkseiten.de/?p=159371",
+      "datum": "25. November 2026",
+      "iso": "2026-11-25T13:00:35+00:00",
+      "autor": "Redaktion"
+    },
+    {
       "titel": "Neue Sicherheitsarchitektur für Europa – USA und Russland diskutieren einen Dogmenbruch – Teil 2",
       "link": "https://www.nachdenkseiten.de/?p=159330",
       "datum": "25. November 2026",
@@ -56,20 +70,6 @@
       "link": "https://www.nachdenkseiten.de/?p=159299",
       "datum": "24. November 2026",
       "iso": "2026-11-24T09:00:44+00:00",
-      "autor": "Redaktion"
-    },
-    {
-      "titel": "Neue Sicherheitsarchitektur für Europa – USA und Russland diskutieren einen Dogmenbruch – Teil 1",
-      "link": "https://www.nachdenkseiten.de/?p=159326",
-      "datum": "24. November 2026",
-      "iso": "2026-11-24T08:00:31+00:00",
-      "autor": "Redaktion"
-    },
-    {
-      "titel": "Hinweise des Tages",
-      "link": "https://www.nachdenkseiten.de/?p=159334",
-      "datum": "24. November 2026",
-      "iso": "2026-11-24T07:21:08+00:00",
       "autor": "Redaktion"
     }
   ]
