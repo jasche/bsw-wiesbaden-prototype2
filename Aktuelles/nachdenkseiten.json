@@ -3,6 +3,27 @@
   "quelle_url": "https://www.nachdenkseiten.de",
   "eintraege": [
     {
+      "titel": "Demokratie braucht Vertrauen",
+      "link": "https://www.nachdenkseiten.de/?p=159494",
+      "datum": "28. November 2026",
+      "iso": "2026-11-28T10:00:50+00:00",
+      "autor": "Redaktion"
+    },
+    {
+      "titel": "Videohinweise am Samstag",
+      "link": "https://www.nachdenkseiten.de/?p=159548",
+      "datum": "28. November 2026",
+      "iso": "2026-11-28T08:00:16+00:00",
+      "autor": "Redaktion"
+    },
+    {
+      "titel": "Termine der Gesprächskreise",
+      "link": "https://www.nachdenkseiten.de/?p=159551",
+      "datum": "28. November 2026",
+      "iso": "2026-11-28T07:00:52+00:00",
+      "autor": "Redaktion"
+    },
+    {
       "titel": "Hinweise des Tages II",
       "link": "https://www.nachdenkseiten.de/?p=159542",
       "datum": "27. November 2026",
@@ -50,27 +71,6 @@
       "datum": "27. November 2026",
       "iso": "2026-11-27T09:00:06+00:00",
       "autor": "Marcus Klöckner"
-    },
-    {
-      "titel": "Deutsch-russische Beziehungen: Die Kontaktsperren durchbrechen",
-      "link": "https://www.nachdenkseiten.de/?p=159461",
-      "datum": "27. November 2026",
-      "iso": "2026-11-27T08:00:54+00:00",
-      "autor": "Redaktion"
-    },
-    {
-      "titel": "Was ist das, ein Militärökonom?",
-      "link": "https://www.nachdenkseiten.de/?p=159466",
-      "datum": "27. November 2026",
-      "iso": "2026-11-27T07:36:44+00:00",
-      "autor": "Albrecht Müller"
-    },
-    {
-      "titel": "Hinweise des Tages",
-      "link": "https://www.nachdenkseiten.de/?p=159459",
-      "datum": "27. November 2026",
-      "iso": "2026-11-27T07:23:57+00:00",
-      "autor": "Redaktion"
     }
   ]
 }
