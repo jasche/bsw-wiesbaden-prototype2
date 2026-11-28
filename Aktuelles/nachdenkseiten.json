@@ -3,6 +3,27 @@
   "quelle_url": "https://www.nachdenkseiten.de",
   "eintraege": [
     {
+      "titel": "Leserbriefe zu „Wer Frieden will, muss die Presse austauschen“",
+      "link": "https://www.nachdenkseiten.de/?p=159479",
+      "datum": "28. November 2026",
+      "iso": "2026-11-28T14:00:34+00:00",
+      "autor": "Redaktion"
+    },
+    {
+      "titel": "Leserbriefe zu „Spiel mit dem Weltkrieg: NATO-Stellvertreterangriff auf die Brücke von Kertsch“",
+      "link": "https://www.nachdenkseiten.de/?p=159512",
+      "datum": "28. November 2026",
+      "iso": "2026-11-28T13:00:39+00:00",
+      "autor": "Redaktion"
+    },
+    {
+      "titel": "„Der Boden war mit Leichen bedeckt“ – Ein Augenzeuge berichtet vom Mehl-Massaker in Gaza",
+      "link": "https://www.nachdenkseiten.de/?p=159447",
+      "datum": "28. November 2026",
+      "iso": "2026-11-28T11:00:17+00:00",
+      "autor": "Redaktion"
+    },
+    {
       "titel": "Demokratie braucht Vertrauen",
       "link": "https://www.nachdenkseiten.de/?p=159494",
       "datum": "28. November 2026",
@@ -50,27 +71,6 @@
       "datum": "27. November 2026",
       "iso": "2026-11-27T13:00:05+00:00",
       "autor": "Redaktion"
-    },
-    {
-      "titel": "Wenn die Wahrheit verschüttet und Journalisten getötet werden",
-      "link": "https://www.nachdenkseiten.de/?p=159482",
-      "datum": "27. November 2026",
-      "iso": "2026-11-27T10:58:15+00:00",
-      "autor": "Redaktion"
-    },
-    {
-      "titel": "Wer kann, der möge – die NachDenkSeiten bitten um Ihre Unterstützung",
-      "link": "https://www.nachdenkseiten.de/?p=159477",
-      "datum": "27. November 2026",
-      "iso": "2026-11-27T10:00:28+00:00",
-      "autor": "Redaktion"
-    },
-    {
-      "titel": "Merz: „Dann werden unsere Kinder keine Mittel mehr vorfinden, über die sie politisch frei verfügen können.“",
-      "link": "https://www.nachdenkseiten.de/?p=159417",
-      "datum": "27. November 2026",
-      "iso": "2026-11-27T09:00:06+00:00",
-      "autor": "Marcus Klöckner"
     }
   ]
 }
